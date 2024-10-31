@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio | MI Architects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="multimedia/THE ART OF VISUALIZATION - MI ARCHITECTS -.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>MI Architects</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="portfolio">
+        <div class="dark-rectangle">
+            <div class="container">
+                <h2>Our Portfolio</h2>
+                <div class="portfolio-grid">
+                    <!-- Portfolio Item 1 (opens house exterior.jpg in slider) -->
+                    <div class="portfolio-item" onclick="openSlider(0)">
+                        <img src="multimedia/woman mi architects visualization.jpg" alt="Villa Block 288" class="portfolio-image">
+                        <div class="overlay">
+                            <div class="caption">
+                                Villa Block 288<br>
+                                MI Architects, 2024
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2 -->
+                    <div class="portfolio-item" onclick="openSlider(1)">
+                        <img src="multimedia/woman mi architects visualization.jpg" alt="Modern Office 24" class="portfolio-image">
+                        <div class="overlay">
+                            <div class="caption">
+                                Modern Office 24<br>
+                                MI Architects, 2024
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more portfolio items as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Slider Modal -->
+    <div id="sliderModal" class="modal">
+        <span class="close" onclick="closeSlider()">&times;</span>
+        <div class="slider-images">
+            <!-- Slider Images (include house exterior image) -->
+            <img src="multimedia/house exterior.jpg" alt="House Exterior" style="display: none;"> <!-- New Image -->
+            <img src="multimedia/woman mi architects visualization.jpg" alt="Villa Block 288" style="display: none;">
+            <img src="multimedia/building_sequence_1.6774.png" alt="Building Sequence" style="display: none;">
+            <!-- Add more images as needed -->
+        </div>
+        <div id="sliderCaption" class="caption"></div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="contact.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MI Architects | Arvanitis Nikolaos</p>
+        </div>
+    </footer>
+
+    <!-- Link to your JavaScript file -->
+    <script src="slider.js"></script>
+</body>
+</html>
