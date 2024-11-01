@@ -1,13 +1,11 @@
-// Contact Form For EmailJS
-
 document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.getElementById('contact-form');
-    
+
     contactForm.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
-        
-        // Send form using EmailJS
-        emailjs.sendForm('contact_service', 'contact_form', contactForm)
+
+        // Send form data through EmailJS
+        emailjs.sendForm('mistudio', 'mitemplate', this)
             .then(function() {
                 alert('Message sent successfully!');
             }, function(error) {
