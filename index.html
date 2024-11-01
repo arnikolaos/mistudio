@@ -60,7 +60,7 @@
             <h1>GALLERY</h1>
 			<br>
             <p>&nbsp;</p>
-			
+<!-- Portfolio Main Page -->
 <div class="portfolio-grid">
        
     <div class="portfolio-item">
@@ -90,7 +90,7 @@
     </section>
 
     <!-- Contact Form -->
-    <section id="contact">
+    <!--<section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
             <form action="contact.php" method="post">
@@ -106,7 +106,25 @@
                 <button type="submit">Send</button>
             </form>
         </div>
-    </section>
+    </section>-->
+	<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contact-form"> <!-- Updated: removed action and method attributes, added id -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+
 
     <footer>
         <div class="container">
