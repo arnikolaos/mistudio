@@ -1,0 +1,515 @@
+@charset "UTF-8";
+/* CSS Document */
+/* Existing styles remain unchanged */
+
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #111;
+}
+
+h1, h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#services, #portfolio, #slogan, #contact {
+    padding: 100px 0;
+    text-align: center;
+}
+
+#slogan h2 {
+    margin-bottom: 50px;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+#portfolio .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.portfolio-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none;
+}
+
+.portfolio-item:hover .portfolio-info {
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    color: #777;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto;
+    background: #222;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input, textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 3px;
+}
+
+button {
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Global background color for all pages */
+body {
+    background-color: #000; /* Ensures the entire background is black */
+    color: #fff; /* Ensures text is white by default */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles consistent across pages */
+header {
+    background-color: transparent;
+}
+
+/* Our Story Section */
+#our-story {
+    padding: 100px 20px;
+}
+
+.story-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
+    padding: 40px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.story-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Team section styling */
+
+#team {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* Align items to the top to prevent clipping */
+    gap: 30px;  /* Space between the team members */
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-member {
+    width: 180px;
+    height: auto;  /* Allow dynamic height to accommodate the captions */
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member img {
+    width: 100%;
+    height: 180px;  /* Set a fixed height for the image */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.team-caption {
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 10px;  /* Add some padding to prevent clipping */
+}
+
+.team-caption .name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.team-caption .role {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Add extra space between the team section and the next section */
+#portfolio {
+    margin-top: 60px;  /* Adjust this if needed */
+}
+/* Dark wrapper to match Our Story page with rounded corners */
+.dark-rectangle {
+    background-color: rgba(0, 0, 0, 0.85); /* Same dark background with slight transparency */
+    padding: 80px 20px; /* Increase padding to match the feel of 'Our Story' */
+    margin: 0 auto;
+    max-width: 1200px; /* Keep content centered and constrained */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Optional: Add shadow for depth */
+    position: relative;
+    z-index: 2; /* Ensure it's layered above the video */
+    border-radius: 12px; /* Same border-radius as 'Our Story' */
+}
+
+/* Portfolio styling */
+.portfolio-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    opacity: 0;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.portfolio-item:hover .portfolio-image {
+    filter: brightness(0.6); /* Darken image */
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.caption {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+
+/* Portfolio styling */
+.portfolio-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    opacity: 0;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.portfolio-item:hover .portfolio-image {
+    filter: brightness(0.6); /* Darken image */
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.caption {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Slider styles */
+.slider {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.slider-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prev, .next {
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.slider:hover {
+    cursor: pointer;
+}
+
+.slider-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.slider-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prev, .next {
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.slider:hover {
+    cursor: pointer;
+}
+
+/* Modal - Pop Up Images*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for the whole screen */
+    z-index: 9999;
+ 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    width: 90%;  
+    height: 90%; 
+    object-fit: contain; 
+	justify-content: center;
+    align-items: center;
+} 
+
+
+/*   Previous Modal For Failsafe Purposes!
+
+.modal {
+    display: none;
+    position: fixed;
+	margin: 5%;
+    top: 0%;
+    left: 0%;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+	
+}
+*/
+
+.slider-images img {
+    width: 100%;
+    display: none;
+}
+
+.portfolio-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.portfolio-image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.portfolio-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adjust opacity as needed */
+    transition: all 0.3s ease;
+    z-index: 1; /* Ensure it's behind the image text but above the image */
+}
+
+.portfolio-image-container:hover::before {
+    background: rgba(0, 0, 0, 0.6); /* Darken on hover if needed */
+}
