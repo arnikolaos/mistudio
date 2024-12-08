@@ -26,8 +26,10 @@ function openSlider(element) {
     currentSlide = 0; // Reset the current slide index to the first image
     showSlide(currentSlide);
 
-    // Show the slider modal
-    document.getElementById("sliderModal").style.display = "block";
+    // Show the slider modal and the arrows
+    document.getElementById("sliderModal").style.display = "flex";
+    document.querySelector(".prev").style.display = "block";
+    document.querySelector(".next").style.display = "block"; // Ensure arrows are visible immediately
 }
 
 // This function is called to close the slider
