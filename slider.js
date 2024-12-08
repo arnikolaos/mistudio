@@ -1,33 +1,56 @@
+// This function is called when a portfolio item is clicked
+function openSlider(element) {
+    // Get the images for the clicked portfolio item from the data-images attribute
+    const images = JSON.parse(element.getAttribute('data-images'));
 
-function openSlider(projectId) {
-    const projects = {
-        killiniVilla: [
-            "multimedia/gallery/killini villa 110/villa kl5.png",
-            "multimedia/gallery/killini villa 110/villa kl29.png"
-        ],
-        brickHouse: [
-            "multimedia/gallery/brick house/house out day 2.jpg",
-            "multimedia/gallery/brick house/house interior.jpg"
-        ]
-    };
-
+    // Get the container where the images will be displayed in the slider
     const sliderContainer = document.querySelector(".slider-images");
-    sliderContainer.innerHTML = "";
+    sliderContainer.innerHTML = ""; // Clear any existing images
 
-    if (projects[projectId]) {
-        projects[projectId].forEach((src) => {
-            const img = document.createElement("img");
-            img.src = src;
-            img.style.display = "none";
-            sliderContainer.appendChild(img);
-        });
+    // Add each image to the slider container
+    images.forEach((src) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.style.display = "none"; // Initially hidden (will be controlled in the slider logic)
+        sliderContainer.appendChild(img);
+    });
 
-        document.getElementById("sliderModal").style.display = "block";
-    } else {
-        console.error("Project not found:", projectId);
-    }
+    // Show the slider modal
+    document.getElementById("sliderModal").style.display = "block";
 }
 
+// This function is called to close the slider
 function closeSlider() {
     document.getElementById("sliderModal").style.display = "none";
 }
+
+// Optional: Add slider navigation functionality
+let currentSlide = 0;
+
+function changeSlide(n) {
+    const slides = document.querySelectorAll(".slider-images img");
+    if (slides.length > 0) {
+        currentSlide += n;
+        if (currentSlide < 0) {
+            currentSlide = slides.length - 1; // Loop back to the last slide
+        } else if (currentSlide >= slides.length) {
+            currentSlide = 0; // Loop back to the first slide
+        }
+
+        // Hide all images
+        slides.forEach(slide => {
+            slide.style.display = "none";
+        });
+
+        // Show the current image
+        slides[currentSlide].style.display = "block";
+    }
+}
+
+// Initialize the slider by displaying the first image when opened
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slider-images img");
+    if (slides.length > 0) {
+        slides[0].style.display = "block"; // Show the first image by default
+    }
+});
