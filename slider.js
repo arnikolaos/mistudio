@@ -12,24 +12,11 @@ function openSlider(element) {
         const img = document.createElement("img");
         img.src = src;
         img.style.display = "none"; // Initially hidden (will be controlled in the slider logic)
-        img.onload = () => {
-            img.style.display = "block"; // Display image once it's loaded
-        };
-        img.onerror = () => {
-            img.style.display = "none"; // Hide broken images if they fail to load
-            console.error("Image failed to load:", src);
-        };
         sliderContainer.appendChild(img);
     });
 
-    // Initialize the first image to be shown
-    currentSlide = 0; // Reset the current slide index to the first image
-    showSlide(currentSlide);
-
-    // Show the slider modal and the arrows
-    document.getElementById("sliderModal").style.display = "flex";
-    document.querySelector(".prev").style.display = "block";
-    document.querySelector(".next").style.display = "block"; // Ensure arrows are visible immediately
+    // Show the slider modal
+    document.getElementById("sliderModal").style.display = "block";
 }
 
 // This function is called to close the slider
@@ -42,33 +29,21 @@ let currentSlide = 0;
 
 function changeSlide(n) {
     const slides = document.querySelectorAll(".slider-images img");
-
     if (slides.length > 0) {
         currentSlide += n;
-
-        // Loop back to the first or last slide depending on the direction
         if (currentSlide < 0) {
             currentSlide = slides.length - 1; // Loop back to the last slide
         } else if (currentSlide >= slides.length) {
             currentSlide = 0; // Loop back to the first slide
         }
 
-        showSlide(currentSlide); // Show the updated slide
-    }
-}
+        // Hide all images
+        slides.forEach(slide => {
+            slide.style.display = "none";
+        });
 
-// Function to show the slide based on the current index
-function showSlide(index) {
-    const slides = document.querySelectorAll(".slider-images img");
-
-    // Hide all slides
-    slides.forEach(slide => {
-        slide.style.display = "none";
-    });
-
-    // Display the current slide
-    if (slides[index]) {
-        slides[index].style.display = "block";
+        // Show the current image
+        slides[currentSlide].style.display = "block";
     }
 }
 
