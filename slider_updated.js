@@ -22,4 +22,3 @@ function openSlider(projectId) {
 function closeSlider() {
     document.getElementById("sliderModal").style.display = "none";
 }
-
