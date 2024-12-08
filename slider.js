@@ -3,9 +3,9 @@ const projects = [
     {
         title: 'KL Villa',
         images: [
-            'multimedia/gallery/killini villa 110/villa kl5.jpeg',
             'multimedia/gallery/killini villa 110/villa kl29.jpeg',
-            'multimedia/gallery/killini villa 110/villa kl30.jpeg'
+            'multimedia/gallery/killini villa 110/villa kl9.jpeg',
+            'multimedia/gallery/killini villa 110/vill kl23.jpeg'
         ]
     },
     {
