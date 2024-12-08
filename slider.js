@@ -131,7 +131,7 @@ function changeSlide(direction) {
     sliderImages[currentSlideIndex].classList.add('jitter');
 }
 
-
+    // Default change slides, no effects!
 /*
 function changeSlide(direction) {
     const sliderImages = document.getElementById('sliderImages').children;
