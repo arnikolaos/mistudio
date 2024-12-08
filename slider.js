@@ -146,3 +146,11 @@ document.addEventListener('keydown', function(event) {
         }
     }
 });
+
+// Listen for the Escape key to close the slider
+document.addEventListener('keydown', function(event) {
+    const sliderModal = document.getElementById('sliderModal');
+    if (event.key === 'Escape' && sliderModal.style.display === 'block') {
+        closeSlider();  // Close the modal if the Escape key is pressed
+    }
+});
