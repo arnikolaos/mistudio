@@ -6,14 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio | MI Architects</title>
     <link rel="stylesheet" href="styles.css">
-	<!-- EmailJS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- Initialize EmailJS -->
-    <script>
-        (function() {
-            emailjs.init("vIISw4m27ZLNjGiqT"); // Replace with your actual EmailJS public key
-        })();
-    </script>
 </head>
 <body>
     <div class="video-background">
@@ -30,8 +22,8 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -50,7 +42,7 @@
                     <img src="multimedia/gallery/killini villa 110/villa kl5.jpeg" alt="Luxury Villa KL exterior in Killini, Greece, by MI Architects 2024" class="portfolio-image">
                     <div class="overlay">
                         <div class="caption">
-                            KL Villa, Greece<br>
+                            KL Villa,<br>
                             Luxury Villa, Residential<br>
                             2024
                       </div>
@@ -62,7 +54,7 @@
                     <img src="multimedia/gallery/brick house/house out day 2.jpg" alt="Modern Brick House with minimalist exterior design by MI Architects, 2024" class="portfolio-image">
                     <div class="overlay">
                         <div class="caption">
-                            Brick House, UK<br>
+                            Brick House,<br>
                             Modern Home, Residential<br>
                             2024
                         </div>
@@ -74,10 +66,10 @@
                     <img src="multimedia/gallery/kanso haus 簡素/japbath4.jpeg" alt="Japanese-inspired bath in Kanso Haus by MI Architects, 2024" class="portfolio-image">
                     <div class="overlay">
                         <div class="caption">
-                            Kanso Haus 簡素, Mexico<br>
-                          Villa, Residential,
+                            Kanso Haus 簡素,<br>
+                            Japanese Bath, Residential<br>
                             2024
-                      </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -87,7 +79,7 @@
                     <div class="overlay">
                         <div class="caption">
                             Kalino Residence, Croatia,<br>
-                            Rural Residence, Residential<br>
+                            Custom Residence, Residential<br>
                             2023
                       </div>
                     </div>
@@ -113,7 +105,7 @@
                     <div class="overlay">
                         <div class="caption">
                             Domaine des Palmes, France,<br>
-                            Villa, Residential<br>
+                            French Villa, Residential<br>
                             2023
                       </div>
                     </div>
@@ -187,8 +179,8 @@
                         <div class="caption">
                             Modern Apartment 24,<br>
                             Dining Area, Interior Design<br>
-                          2023
-                    </div>
+                            2024
+                      </div>
                     </div>
                 </div>
                 
@@ -198,7 +190,7 @@
                     <div class="overlay">
                         <div class="caption">
                             Apartment, Greece,<br>
-                            Renovation , Residential<br>
+                            Renovation , Residential,<br>
                             2024
                       </div>
                     </div>
@@ -209,45 +201,14 @@
                     <img src="multimedia/gallery/infinity villa/infinite_villa.2457.jpeg" alt="Infinity Estate with infinity pool in Greece by MI Architects, 2023" class="portfolio-image">
                     <div class="overlay">
                         <div class="caption">
-                          <p> Infinity Estate, Greece,<br>
-                              Luxury Villa, Residential<br>
-                              2022</p>
-                            <p>&nbsp;</p>
+                            Infinity Estate, Greece,<br>
+                            Luxury Villa, Residential,<br>
+                            2023
                       </div>
                     </div>
                 </div>
-	 
-                <!-- Portfolio Item 15 -->
-                <div class="portfolio-item" onclick="openSlider(1)">
-                    <img src="multimedia/gallery/Casa Sorgente/sorgente casa 0.jpg" alt="Infinity Estate with infinity pool in Greece by MI Architects, 2023" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                          <p> Casa Sorgente, Italy&nbsp;<br>
-                              Luxury House, Residential<br>
-                              2024</p>
-                           
-                      </div>
-                  </div>
-        </div>
 
- 
-                <!-- Portfolio Item 16-->
-                <div class="portfolio-item" onclick="openSlider(1)">
-                    <img src="multimedia/gallery/ dream villas/hqdream arched villas mi architects5-Hd-.jpeg" alt="Infinity Estate with infinity pool in Greece by MI Architects, 2023" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                          <p>Arched  Villas, Greece,<br>
-                              Luxury Villa, Residential<br>
-                              2022</p>
-                            
-                      </div>
-                  </div>
-        </div>
-
-	             
-	            
-
-          </div>
+            </div>
         </div>
     </div>
 </section>
@@ -271,23 +232,21 @@
         <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
-      
-	<!-- Contact Form -->
-	
+
     <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <form id="contact-form">
+            <form action="contact.php" method="post">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="from_name" required>
+                <input type="text" id="name" name="name" required>
                 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="user_email" required>
+                <input type="email" id="email" name="email" required>
 
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
 
-                <button type="submit">SEND MESSAGE</button>
+                <button type="submit">Send</button>
             </form>
         </div>
     </section>
@@ -298,7 +257,7 @@
         </div>
     </footer>
 
-    <!-- Link to custom JavaScript file for form handling -->
-    <script src="contact.js"></script>
+    <!-- Link to your JavaScript file -->
+    <script src="slider.js"></script>
 </body>
 </html>
