@@ -123,3 +123,11 @@ function changeSlide(direction) {
 
     sliderImages[currentSlideIndex].classList.add('active');
 }
+
+// Close the slider when clicking outside the image area (background)
+document.getElementById('sliderModal').addEventListener('click', function(event) {
+    // Check if the clicked area is the background and not the image or close button
+    if (event.target === this) {
+        closeSlider();  // Close the modal if clicked outside the image
+    }
+});
