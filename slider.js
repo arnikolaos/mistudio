@@ -131,3 +131,18 @@ document.getElementById('sliderModal').addEventListener('click', function(event)
         closeSlider();  // Close the modal if clicked outside the image
     }
 });
+
+// Listen for keydown events to enable left and right navigation with arrow keys
+document.addEventListener('keydown', function(event) {
+    // Check if the modal is open
+    const sliderModal = document.getElementById('sliderModal');
+    if (sliderModal.style.display === 'block') {
+        if (event.key === 'ArrowLeft') {
+            // Navigate to the previous slide
+            changeSlide(-1);
+        } else if (event.key === 'ArrowRight') {
+            // Navigate to the next slide
+            changeSlide(1);
+        }
+    }
+});
