@@ -154,3 +154,95 @@ document.addEventListener('keydown', function(event) {
         closeSlider();  // Close the modal if the Escape key is pressed
     }
 });
+
+// List of images for each project
+const projects = [
+    {
+        title: "KL Villa",
+        images: [
+            "multimedia/gallery/killini villa 110/villa kl5.jpeg",
+            "multimedia/gallery/killini villa 110/villa kl29.jpeg",
+            "multimedia/gallery/killini villa 110/villa kl25.jpeg"
+        ]
+    },
+    {
+        title: "Brick House",
+        images: [
+            "multimedia/gallery/brick house/house out day 2.jpg",
+            "multimedia/gallery/brick house/house1.jpg",
+            "multimedia/gallery/brick house/house2.jpg"
+        ]
+    },
+    // Add other projects here...
+];
+
+let currentSlideIndex = 0;
+
+function openSlider(projectIndex) {
+    const sliderModal = document.getElementById('sliderModal');
+    const sliderImages = document.getElementById('sliderImages');
+    sliderImages.innerHTML = '';
+
+    // Load images for the selected project
+    projects[projectIndex].images.forEach((image, index) => {
+        const img = document.createElement('img');
+        img.src = image;
+        img.className = index === 0 ? 'active' : '';
+        sliderImages.appendChild(img);
+    });
+
+    currentSlideIndex = 0;
+    sliderModal.style.display = 'block';
+}
+
+function closeSlider() {
+    document.getElementById('sliderModal').style.display = 'none';
+}
+
+function changeSlide(direction) {
+    const sliderImages = document.getElementById('sliderImages').children;
+    
+    // Remove 'active' and jitter from the previous image
+    sliderImages[currentSlideIndex].classList.remove('active', 'jitter');
+    
+    // Move to the next or previous slide
+    currentSlideIndex += direction;
+    if (currentSlideIndex < 0) currentSlideIndex = sliderImages.length - 1;
+    if (currentSlideIndex >= sliderImages.length) currentSlideIndex = 0;
+
+    // Add 'active' to the new image
+    sliderImages[currentSlideIndex].classList.add('active');
+    
+    // Add jitter effect to the new image
+    sliderImages[currentSlideIndex].classList.add('jitter');
+}
+
+// Close the slider when clicking outside the image area (background)
+document.getElementById('sliderModal').addEventListener('click', function(event) {
+    if (event.target === this) {
+        closeSlider();  // Close the modal if clicked outside the image
+    }
+});
+
+// Listen for keydown events to enable left and right navigation with arrow keys
+document.addEventListener('keydown', function(event) {
+    const sliderModal = document.getElementById('sliderModal');
+    if (sliderModal.style.display === 'block') {
+        if (event.key === 'ArrowLeft') {
+            changeSlide(-1); // Navigate to the previous slide
+        } else if (event.key === 'ArrowRight') {
+            changeSlide(1); // Navigate to the next slide
+        } else if (event.key === 'Escape') {
+            closeSlider(); // Close the slider with the Escape key
+        }
+    }
+});
+
+// Listen for the Escape key to close the slider
+document.addEventListener('keydown', function(event) {
+    const sliderModal = document.getElementById('sliderModal');
+    if (event.key === 'Escape' && sliderModal.style.display === 'block') {
+        closeSlider();  // Close the modal if the Escape key is pressed
+    }
+});
+
