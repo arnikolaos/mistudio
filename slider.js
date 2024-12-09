@@ -61,10 +61,10 @@ const projects = [
         title: "Sculptural Ceiling Building",
         images: [
             "multimedia/gallery/sculpture ceiling/Building Sculptural Ceiling_By MI Architects 19.jpg",
-			"multimedia/gallery/sculpture ceiling/sculptural_ceiling4.jpeg",
-			"multimedia/gallery/sculpture ceiling/sculptural_ceiling5.jpeg",
-			"multimedia/gallery/sculpture ceiling/sculptural_ceiling3.jpeg",
-			"multimedia/gallery/sculpture ceiling/sculptural_ceiling_presentation.jpeg"
+			"multimedia/gallery/sculpture ceiling/sculptural_ceiling4.jpg",
+			"multimedia/gallery/sculpture ceiling/sculptural_ceiling5.jpg",
+			"multimedia/gallery/sculpture ceiling/sculptural_ceiling3.jpg",
+			"multimedia/gallery/sculpture ceiling/sculptural_ceiling_presentation.jpg"
         ]
     },
     {
