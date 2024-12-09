@@ -38,7 +38,8 @@ const projects = [
             "multimedia/gallery/ritso/ritso resort1.jpg",
 			"multimedia/gallery/ritso/ritso resort5.jpg",
 			"multimedia/gallery/ritso/ritso resort11.jpg",
-			"multimedia/gallery/ritso/ritso resort7.jpg"
+			"multimedia/gallery/ritso/ritso resort7.jpg",
+			"multimedia/gallery/ritso/ritso resort9.jpg"
         ]
     },
     {
