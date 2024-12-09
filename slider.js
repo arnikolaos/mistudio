@@ -112,7 +112,7 @@ const projects = [
         ]
     },
 	{
-        title: "Infinity Estate",
+        title: "Casa Sorgente",
         images: [
             "multimedia/gallery/Casa Sorgente/hqsorgente7-HR.jpg"
         ]
