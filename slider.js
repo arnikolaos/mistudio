@@ -110,6 +110,12 @@ const projects = [
         images: [
             "multimedia/gallery/infinity villa/infinite_villa.2457.jpeg"
         ]
+    },
+	{
+        title: "Infinity Estate",
+        images: [
+            "multimedia/gallery/Casa Sorgente/hqsorgente7-HR.jpg"
+        ]
     }
 ];
 
