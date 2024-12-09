@@ -3,14 +3,14 @@ const projects = [
     {
         title: "KL Villa",
         images: [
-            "multimedia/gallery/killini villa 110/villa kl5.jpeg",
-            "multimedia/gallery/killini villa 110/villa kl29.jpeg",
-            "multimedia/gallery/killini villa 110/villa kl28.jpeg",
-			"multimedia/gallery/killini villa 110/villa kl9.jpeg",
-			"multimedia/gallery/killini villa 110/villa kl17.jpeg",
-			"multimedia/gallery/killini villa 110/villa kl25.jpeg",
-			"multimedia/gallery/killini villa 110/villa kl23.jpeg",
-			"multimedia/gallery/killini villa 110/villa kl10.jpeg"
+            "multimedia/gallery/killini villa 110/villa kl5.jpg",
+            "multimedia/gallery/killini villa 110/villa kl29.jpg",
+            "multimedia/gallery/killini villa 110/villa kl28.jpg",
+			"multimedia/gallery/killini villa 110/villa kl9.jpg",
+			"multimedia/gallery/killini villa 110/villa kl17.jpg",
+			"multimedia/gallery/killini villa 110/villa kl25.jpg",
+			"multimedia/gallery/killini villa 110/villa kl23.jpg",
+			"multimedia/gallery/killini villa 110/villa kl10.jpg"
 			
         ]
     },
@@ -117,12 +117,7 @@ const projects = [
             "multimedia/gallery/infinity villa/infinite_villa.2457.jpeg"
         ]
     },
-	{
-        title: "Casa Sorgente",
-        images: [
-            "multimedia/gallery/Casa Sorgente/hqsorgente7-HR.jpg"
-        ]
-    },
+	
 	{
         title: "Dream Villas",
         images: [
@@ -130,6 +125,12 @@ const projects = [
 			"multimedia/gallery/dream villas/dream villas4.jpg",
 			"multimedia/gallery/dream villas/dream villas3.jpg",
 			"multimedia/gallery/dream villas/dream villas1.jpg"
+        ]
+    },
+	{
+        title: "Casa Sorgente",
+        images: [
+            "multimedia/gallery/Casa Sorgente/hqsorgente7-HR.jpg"
         ]
     }
 ];
