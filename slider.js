@@ -12,62 +12,84 @@ const projects = [
         title: "Brick House",
         images: [
             "multimedia/gallery/brick house/house out day 2.jpg",
-            "multimedia/gallery/brick house/house1.jpg",
-            "multimedia/gallery/brick house/house2.jpg"
+            "multimedia/gallery/brick house/brick house1.jpg",
+            "multimedia/gallery/brick house/brick house2.jpg"
         ]
     },
     {
         title: "Kanso Haus",
         images: [
             "multimedia/gallery/kanso haus 簡素/japbath4.jpeg"
+			"multimedia/gallery/kanso haus 簡素/japbath kanso.jpeg"
+			"multimedia/gallery/kanso haus 簡素/japbath3.jpeg"
         ]
     },
     {
         title: "Kalino Residence",
         images: [
             "multimedia/gallery/kalino villa/fireplace1.jpeg"
+			"multimedia/gallery/kalino villa/kitchen kalino.jpeg"
+			"multimedia/gallery/kalino villa/kitchen kalino night.jpeg"
         ]
     },
     {
         title: "Ritso Resort",
         images: [
-            "multimedia/gallery/ritso/ RITSO Resort_By MI Architects 17.jpg"
+            "multimedia/gallery/ritso/ritso resort1.jpg"
+			"multimedia/gallery/ritso/ritso resort5.jpg"
+			"multimedia/gallery/ritso/ritso resort11.jpg"
+			"multimedia/gallery/ritso/ritso resort7.jpg"
         ]
     },
     {
         title: "Domaine des Palmes",
         images: [
             "multimedia/gallery/palm villa/villa palms4.jpeg"
+			"multimedia/gallery/palm villa/villa palms2.jpeg"
+			"multimedia/gallery/palm villa/villa palms3 2.jpeg"
         ]
     },
     {
         title: "Cavaro Estate",
         images: [
             "multimedia/gallery/kalino villa/kalinovilla0012.jpeg"
+			
         ]
     },
     {
         title: "Sculptural Ceiling Building",
         images: [
             "multimedia/gallery/sculpture ceiling/Building Sculptural Ceiling_By MI Architects 19.jpg"
+			"multimedia/gallery/sculpture ceiling/sculptural_ceiling4.jpeg"
+			"multimedia/gallery/sculpture ceiling/sculptural_ceiling5.jpeg"
+			"multimedia/gallery/sculpture ceiling/sculptural_ceiling3.jpeg"
+			"multimedia/gallery/sculpture ceiling/sculptural_ceiling_presentation.jpeg"
         ]
     },
     {
         title: "LEB Seaside Villa",
         images: [
             "multimedia/gallery/killini villa big/ilia_villa1.jpg"
+			"multimedia/gallery/killini villa big/ilia_villa2.jpg"
+			"multimedia/gallery/killini villa big/ilia_villa3.jpg"
+			"multimedia/gallery/killini villa big/ilia_villa5.jpeg"
         ]
     },
     {
         title: "Beauty Salon",
         images: [
             "multimedia/gallery/co-working moscow/00032.jpeg"
+			"multimedia/gallery/co-working moscow/coworkingsalon1.jpeg"
+			"multimedia/gallery/co-working moscow/coworking salon3.jpeg"
+			"multimedia/gallery/co-working moscow/coworkingsalon2.jpeg"
+			
         ]
     },
     {
         title: "Serenity Circle Garden",
         images: [
             "multimedia/gallery/serenity circle garden/tower_meditation-1 2.jpeg"
+			"multimedia/gallery/serenity circle garden/tower_meditation-8.jpeg"
         ]
     },
     {
