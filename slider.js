@@ -5,7 +5,12 @@ const projects = [
         images: [
             "multimedia/gallery/killini villa 110/villa kl5.jpeg",
             "multimedia/gallery/killini villa 110/villa kl29.jpeg",
-            "multimedia/gallery/killini villa 110/villa kl25.jpeg"
+            "multimedia/gallery/killini villa 110/villa kl25.jpeg",
+			"multimedia/gallery/killini villa 110/villa kl17.jpeg",
+			"multimedia/gallery/killini villa 110/villa kl9.jpeg",
+			"multimedia/gallery/killini villa 110/villa kl23.jpeg",
+			"multimedia/gallery/killini villa 110/villa kl10.jpeg",
+			"multimedia/gallery/killini villa 110/villa kl25.jpeg"
         ]
     },
     {
@@ -115,6 +120,15 @@ const projects = [
         title: "Casa Sorgente",
         images: [
             "multimedia/gallery/Casa Sorgente/hqsorgente7-HR.jpg"
+        ]
+    },
+	{
+        title: "Dream Villas",
+        images: [
+            "multimedia/gallery/dream villas/dream villas2.jpg",
+			"multimedia/gallery/dream villas/dream villas4.jpg",
+			"multimedia/gallery/dream villas/dream villas3.jpg",
+			"multimedia/gallery/dream villas/dream villas1.jpg"
         ]
     }
 ];
