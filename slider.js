@@ -5,12 +5,13 @@ const projects = [
         images: [
             "multimedia/gallery/killini villa 110/villa kl5.jpeg",
             "multimedia/gallery/killini villa 110/villa kl29.jpeg",
-            "multimedia/gallery/killini villa 110/villa kl25.jpeg",
-			"multimedia/gallery/killini villa 110/villa kl17.jpeg",
+            "multimedia/gallery/killini villa 110/villa kl28.jpeg",
 			"multimedia/gallery/killini villa 110/villa kl9.jpeg",
+			"multimedia/gallery/killini villa 110/villa kl17.jpeg",
+			"multimedia/gallery/killini villa 110/villa kl25.jpeg",
 			"multimedia/gallery/killini villa 110/villa kl23.jpeg",
-			"multimedia/gallery/killini villa 110/villa kl10.jpeg",
-			"multimedia/gallery/killini villa 110/villa kl25.jpeg"
+			"multimedia/gallery/killini villa 110/villa kl10.jpeg"
+			
         ]
     },
     {
