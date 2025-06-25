@@ -1,242 +1,251 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MI Development</title>
-  <style>
-    body {
-      font-family: Montserrat, sans-serif;
-      background-color: #f8f6f2;
-      margin: 0;
-      padding: 0;
-      color: #222;
-    }
-    header {
-      text-align: center;
-      padding: 2rem;
-    }
-    .hero {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin: 0 1rem;
-    }
-    .hero-slider {
-      flex: 0 0 60%;
-      min-width: 300px;
-    }
-    .hero-image {
-      flex: 0 0 38%;
-      min-width: 300px;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .hero-slider img, .hero-image img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-    }
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      margin: 2rem 0;
-    }
-    .section {
-      padding: 2rem;
-      text-align: center;
-    }
-    .quote {
-      font-style: italic;
-      margin-top: 1rem;
-    }
-    .button {
-      display: inline-block;
-      background-color: #222;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 4px;
-      margin: 1rem 0;
-    }
-    .form-section {
-      background-color: #e8e5df;
-      padding: 2rem;
-    }
-    form {
-      max-width: 600px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 1 rem;
-    }
-    .sticky-contact {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #222;
-      color: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-  </style>
-  <!-- EmailJS SDK -->
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MI Development</title>
+    <style>
+      body {
+        font-family: Montserrat, sans-serif;
+        background-color: #f8f6f2;
+        margin: 0;
+        padding: 0;
+        color: #222;
+      }
+      header {
+        text-align: center;
+        padding: 2rem;
+      }
+      .hero {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin: 0 1rem;
+      }
+      .hero-slider {
+        flex: 0 0 60%;
+        min-width: 300px;
+      }
+      .hero-image {
+        flex: 0 0 38%;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .hero-slider img,
+      .hero-image img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+      }
+      iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+        margin: 2rem 0;
+      }
+      .section {
+        padding: 2rem;
+        text-align: center;
+      }
+      .quote {
+        font-style: italic;
+        margin-top: 1rem;
+      }
+      .button {
+        display: inline-block;
+        background-color: #222;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        border-radius: 4px;
+        margin: 1rem 0;
+      }
+      .form-section {
+        background-color: #e8e5df;
+        padding: 2rem;
+        align-content: center;
+        display:;
+      }
+      form {
+        max-width: 600px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      input,
+      textarea {
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+      }
+      footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 1 rem;
+      }
+      .sticky-contact {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #222;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    </style>
+    <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- Initialize EmailJS -->
     <script>
-        (function() {
-            emailjs.init("vIISw4m27ZLNjGiqT"); // Replace with your actual EmailJS public key
-        })();
+      (function () {
+        emailjs.init("vIISw4m27ZLNjGiqT"); // Replace with your actual EmailJS public key
+      })();
     </script>
-</head>
-<body>
-  <header>
-    <h1>MI DEVELOPMENT</h1>
-    <h1></h1>
-    <p class="quote">“Buy From The Vision - Own It From The Plans Up”</p>
-  </header>
+  </head>
+  <body>
+    <header>
+      <h1>MI DEVELOPMENT</h1>
+      <h1></h1>
+      <p class="quote">“Buy From The Vision - Own It From The Plans Up”</p>
+    </header>
 
-  <!-- Origami Villa Section -->
-  <section class="section" id="orokami">
-    <h2>Orokami Villa おろ神</h2>
-    <div class="hero">
-      <div class="hero-slider">
-        <img src="/multimedia/gallery/orokami_villa/orokami_villa_20.jpeg" alt="Orokami Villa Slide 1">
+    <!-- Origami Villa Section -->
+    <section class="section" id="orokami">
+      <h2>Orokami Villa おろ神</h2>
+      <div class="hero">
+        <div class="hero-slider">
+          <img src="/multimedia/gallery/orokami_villa/orokami_villa_20.jpeg" alt="Orokami Villa Slide 1" />
+        </div>
+        <div class="hero-image">
+          <img src="/multimedia/gallery/orokami_villa/orokami_villa_3.jpeg" alt="Orokami Villa Side Image" />
+          <img src="/multimedia/gallery/orokami_villa/orokami_villa_5.jpeg" alt="Orokami Villa Side Image 2" />
+        </div>
       </div>
-      <div class="hero-image">
-        <img src="/multimedia/gallery/orokami_villa/orokami_villa_3.jpeg" alt="Orokami Villa Side Image">
-        <img src="/multimedia/gallery/orokami_villa/orokami_villa_5.jpeg" alt="Orokami Villa Side Image 2">
+      <iframe
+        src="https://www.youtube.com/embed/Jc9K_fEsSb0?autoplay=1&mute=1&loop=1&playlist=Jc9K_fEsSb0"
+        allow="autoplay"></iframe>
+      <p>
+        Orokami Villa おろ神 is a rare sanctuary sculpted into the cliffs above one of the world’s most celebrated
+        beaches in Lefkada. Hovering between mountain (Greek: oros) and spirit (Japanese: kami), its name reflects the
+        architectural essence: a fusion of grounded earth and quiet divinity. This fully realized, turnkey villa is now
+        available — expertly designed and nearing completion — offering a once-in-a-lifetime opportunity to own a
+        finished work of architecture. Every space is aligned to the sea, capturing 270-degree unobstructed views — from
+        two en suite bedrooms, a semi-outdoor lounge, an open kitchen, and a sculptural amphitheater-style concrete
+        bench lounge, to the iconic infinity pool, a guests' bathroom, a beautiful mezzanine with balcony, and expansive
+        infinity rooftop terraces boasting breathtaking 360-degree views of the sea horizon and the sloping terrain. A
+        private back terrace with a small reflective pool and curated native gardens complete the retreat. Circular
+        openings, subterranean gestures, and sculpted lines bring light, shadow, and silence into harmony. The entire
+        villa is unified by continuous microcement surfaces, flowing seamlessly across built-in beds, walls, and
+        furnishings — a tactile expression of calm and cohesion. Orokami is more than a home — it’s an elemental
+        retreat, fully built, and ready to welcome its first spirit.
+      </p>
+      <a class="button" href="orokami_specs.pdf" download>Download PDF Specs</a>
+    </section>
+
+    <!-- Zathera Villa Section -->
+    <section class="section" id="zathera">
+      <h2>Zathera Villa</h2>
+      <div class="hero">
+        <div class="hero-slider">
+          <img src="/multimedia/gallery/zathera_villa/zathera_villa_10.jpeg" alt="Zathera Villa Slide 1" />
+        </div>
+        <div class="hero-image">
+          <img src="/multimedia/gallery/zathera_villa/zathera_villa_4.jpeg" alt="Zathera Villa Side Image" />
+          <img src="/multimedia/gallery/zathera_villa/zathera_villa_1.jpg" alt="Zathera Villa Side Image 2" />
+        </div>
       </div>
+      <!-- <iframe src="https://www.youtube.com/embed/Jc9K_fEsSb0?autoplay=1&mute=1&loop=1&playlist=Jc9K_fEsSb0" allow="autoplay"></iframe> -->
+      <p>
+        Zathera Villa rises gracefully from the terraced slopes of a tranquil Ionian landscape, embodying an
+        architectural dialogue between light, earth, and eternity. Centered around a majestic olive tree that serves as
+        the inspiration and spatial axis of the design, the villa unfolds as a sculptural reflection on time, memory,
+        and the elemental beauty of nature. Its monolithic form is carefully anchored into the terrain, balancing
+        monumentality with intimacy through clean lines, thoughtful voids, and sheltered outdoor spaces that frame
+        breathtaking views from mountain to sea. Crafted with tactile tsimentokonia plaster blended with local sand,
+        natural stone, warm wood accents, and expansive glass, the materials root the home deeply in place while
+        dissolving boundaries between interior and landscape. The open-plan living spaces flow seamlessly, embracing the
+        olive tree and a surrounding pool that provides both meditation and natural cooling. Two secluded bedrooms with
+        en-suite baths, a minimal floating staircase, and subtle lighting complete a residence designed to age
+        gracefully and offer timeless Mediterranean luxury. Zathera Villa is delivered turnkey—from detailed
+        architectural plans to a fully realized sanctuary—offering discerning buyers a rare opportunity to own a
+        thoughtful, poetic home that celebrates slowness, connection to place, and enduring material truth.
+      </p>
+      <a class="button" href="zathera_brochure.pdf" download>Download Brochure</a>
+    </section>
+
+    <!-- MI Development Section -->
+    <section class="section" id="mi">
+      <h2>MI Development</h2>
+      <p>
+        At MI Development, we combine the expertise of architects, engineers, and developers to deliver unique luxury
+        villas across Greece’s most sought-after destinations, including Lefkada. What sets us apart is our full control
+        over every stage of the process—from site selection and architectural design to construction and final delivery.
+        This comprehensive oversight ensures exceptional quality, timely execution, and a seamless experience for our
+        buyers. With deep local knowledge and a commitment to excellence, we create homes that stand as lasting works of
+        art and sound investments.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="form-section" id="contact">
+      <h2 style="text-align: center">Express Your Interest</h2>
+      <!-- WhatsApp Contact -->
+      <p style="text-align: center; margin: 20px 0">
+        📞
+        <a href="https://wa.me/306939327149" target="_blank" rel="noopener noreferrer">+30 693 9327149</a>
+        <a
+          href="https://wa.me/306939327149"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="margin-left: 5px; text-decoration: none">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+            width="16"
+            height="16"
+            style="vertical-align: middle" /> </a
+        >,
+        <a href="https://wa.me/306947215327" target="_blank" rel="noopener noreferrer">+30 694 7215327</a>
+        <a
+          href="https://wa.me/306947215327"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="margin-left: 5px; text-decoration: none">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+            width="16"
+            height="16"
+            style="vertical-align: middle" />
+        </a>
+        &nbsp;&nbsp; | &nbsp;&nbsp; Message or call us on WhatsApp
+      </p>
+      <!-- Contact Form -->
+      <h2 style="text-align: center">Or Send Us A Message</h2>
+      <form id="contact-form">
+        <input type="text" name="from_name" placeholder="Your Name" required />
+        <input type="email" name="user_email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="button">Send Message</button>
+      </form>
+    </section>
+    <footer>
+      <p>© 2025 MI Development - MI Architects</p>
+    </footer>
+
+    <div class="sticky-contact" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+      Contact Us
     </div>
-    <iframe src="https://www.youtube.com/embed/Jc9K_fEsSb0?autoplay=1&mute=1&loop=1&playlist=Jc9K_fEsSb0" allow="autoplay"></iframe>
-    <p>
-      Orokami Villa おろ神 is a rare sanctuary sculpted into the cliffs above one of the world’s most celebrated beaches
-      in Lefkada. Hovering between mountain (Greek: oros) and spirit (Japanese: kami), its name reflects the
-      architectural essence: a fusion of grounded earth and quiet divinity. This fully realized, turnkey villa is now
-      available — expertly designed and nearing completion — offering a once-in-a-lifetime opportunity to own a finished
-      work of architecture. Every space is aligned to the sea, capturing 270-degree unobstructed views — from two en
-      suite bedrooms, a semi-outdoor lounge, an open kitchen, and a sculptural amphitheater-style concrete bench lounge,
-      to the iconic infinity pool, a guests' bathroom, a beautiful mezzanine with balcony, and expansive infinity
-      rooftop terraces boasting breathtaking 360-degree views of the sea horizon and the sloping terrain. A private back terrace
-      with a small reflective pool and curated native gardens complete the retreat. Circular openings, subterranean
-      gestures, and sculpted lines bring light, shadow, and silence into harmony. The entire villa is unified by
-      continuous microcement surfaces, flowing seamlessly across built-in beds, walls, and furnishings — a tactile
-      expression of calm and cohesion. Orokami is more than a home — it’s an elemental retreat, fully built, and ready
-      to welcome its first spirit.
-    </p> 
-    <a class="button" href="orokami_specs.pdf" download>Download PDF Specs</a>
-  </section>
 
-  <!-- Zathera Villa Section -->
-  <section class="section" id="zathera">
-    <h2>Zathera Villa</h2>
-    <div class="hero">
-      <div class="hero-slider">
-        <img src="/multimedia/gallery/zathera_villa/zathera_villa_10.jpeg" alt="Zathera Villa Slide 1">
-      </div>
-      <div class="hero-image">
-        <img src="/multimedia/gallery/zathera_villa/zathera_villa_4.jpeg" alt="Zathera Villa Side Image">
-        <img src="/multimedia/gallery/zathera_villa/zathera_villa_1.jpg" alt="Zathera Villa Side Image 2">
-      </div>
-    </div>
-    <!-- <iframe src="https://www.youtube.com/embed/Jc9K_fEsSb0?autoplay=1&mute=1&loop=1&playlist=Jc9K_fEsSb0" allow="autoplay"></iframe> -->
-    <p>
-      Zathera Villa rises gracefully from the terraced slopes of a tranquil Ionian landscape, embodying an architectural
-      dialogue between light, earth, and eternity. Centered around a majestic olive tree that serves as the inspiration
-      and spatial axis of the design, the villa unfolds as a sculptural reflection on time, memory, and the elemental
-      beauty of nature. Its monolithic form is carefully anchored into the terrain, balancing monumentality with
-      intimacy through clean lines, thoughtful voids, and sheltered outdoor spaces that frame breathtaking views from
-      mountain to sea. Crafted with tactile tsimentokonia plaster blended with local sand, natural stone, warm wood
-      accents, and expansive glass, the materials root the home deeply in place while dissolving boundaries between
-      interior and landscape. The open-plan living spaces flow seamlessly, embracing the olive tree and a surrounding
-      pool that provides both meditation and natural cooling. Two secluded bedrooms with en-suite baths, a minimal
-      floating staircase, and subtle lighting complete a residence designed to age gracefully and offer timeless
-      Mediterranean luxury. Zathera Villa is delivered turnkey—from detailed architectural plans to a fully realized
-      sanctuary—offering discerning buyers a rare opportunity to own a thoughtful, poetic home that celebrates slowness,
-      connection to place, and enduring material truth.
-    </p> <a class="button" href="zathera_brochure.pdf" download>Download Brochure</a>
-  </section>
-
-  <!-- MI Development Section -->
-  <section class="section" id="mi">
-    <h2>MI Development</h2>
-    <p>
-      At MI Development, we combine the expertise of architects, engineers, and developers to deliver unique luxury
-      villas across Greece’s most sought-after destinations, including Lefkada. What sets us apart is our full control
-      over every stage of the process—from site selection and architectural design to construction and final delivery.
-      This comprehensive oversight ensures exceptional quality, timely execution, and a seamless experience for our
-      buyers. With deep local knowledge and a commitment to excellence, we create homes that stand as lasting works of
-      art and sound investments.
-    </p>
-  </section>
-
- <!-- Contact Form -->
-<section class="form-section" id="contact">
-  <h2 style="text-align: center;">Express Your Interest</h2>
-  <form id="contact-form">
-    <input type="text" name="from_name" placeholder="Your Name" required>
-    <input type="email" name="user_email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" class="button">Send Message</button>
-  </form>
-</section>
-<footer>
-  <p>
-    📞
-    <a href="https://wa.me/306939327149" target="_blank" rel="noopener noreferrer">+30 693 9327149</a>
-    <a
-      href="https://wa.me/306939327149"
-      target="_blank"
-      rel="noopener noreferrer"
-      style="margin-left: 5px; text-decoration: none">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-        alt="WhatsApp"
-        width="16"
-        height="16"
-        style="vertical-align: middle" /> </a
-    >,
-    <a href="https://wa.me/306947215327" target="_blank" rel="noopener noreferrer">+30 694 7215327</a>
-    <a
-      href="https://wa.me/306947215327"
-      target="_blank"
-      rel="noopener noreferrer"
-      style="margin-left: 5px; text-decoration: none">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-        alt="WhatsApp"
-        width="16"
-        height="16"
-        style="vertical-align: middle" />
-    </a>
-    &nbsp;&nbsp; | &nbsp;&nbsp; Message or call us on WhatsApp
-
-  </p>
-  <p>© 2025 MI Development - MI Architects</p>
-</footer>
-
-
-
-  <div class="sticky-contact" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
-    Contact Us
-  </div>
-    
     <!-- Link to custom JavaScript file for form handling -->
     <script src="contact.js"></script>
-</body>
+  </body>
 </html>
