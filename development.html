@@ -100,6 +100,31 @@
         border-radius: 8px;
         cursor: pointer;
       }
+      .whatsapp-button {
+        display: inline-flex; /* align items horizontally */
+        align-items: center; /* vertically center icon and text */
+        padding: 10px 20px;
+        background-color: #25d366; /* WhatsApp green */
+        color: white;
+        font-weight: 600;
+        font-size: 1.15rem;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+      }
+
+      .whatsapp-button:hover {
+        background-color: #1ebe57;
+      }
+
+      .whatsapp-button img {
+        margin-right: 8px; /* space between icon and text */
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+      }
     </style>
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -199,9 +224,13 @@
       <h2 style="text-align: center">Express Your Interest</h2>
 
       <!-- WhatsApp Contact -->
-      <h2 style="text-align: center; margin: 20px 0; font-weight: 600; font-size: 1.15rem">
-        Message or call us on WhatsApp
-      </h2>
+      <p style="text-align: center; margin-bottom: 15px">
+        <a href="https://wa.me/306939327149" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+          Click to message or call us on WhatsApp
+        </a>
+      </p>
+
       <p style="text-align: center; font-weight: 500; font-size: 1.15rem">
         📞
         <a href="https://wa.me/306939327149" target="_blank" rel="noopener noreferrer" style="font-weight: bold">
