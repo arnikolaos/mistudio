@@ -10,7 +10,7 @@
     <style>
       body {
         font-family: Montserrat, sans-serif;
-        background-color: #f8f6f2;
+        background-color: #dddad5;
         margin: 0;
         padding: 0;
         color: #222;
@@ -246,6 +246,18 @@
         stroke: rgba(255, 255, 255, 0.2);
         stroke-width: 0.8;
       }
+      
+      /* This is for overlay canvas script to be shown on top */
+      #overlay-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Keep it on top of everything */
+  pointer-events: none; /* Allows clicking through */
+  width: 100vw;
+  height: 100vh;
+}
+
     </style>
 
     <!-- EmailJS SDK -->
@@ -258,6 +270,9 @@
     </script>
   </head>
   <body>
+    <!-- This is for ensure that overlay will be shown correctly -->
+    <canvas id="overlay-canvas"></canvas>
+
     <header>
       <h1>MI DEVELOPMENT</h1>
       <h1></h1>
@@ -291,9 +306,17 @@
         </section>
       </div>
 
-      <iframe
-        src="https://www.youtube.com/embed/Jc9K_fEsSb0?autoplay=1&mute=1&loop=1&playlist=Jc9K_fEsSb0"
-        allow="autoplay"></iframe>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/Jc9K_fEsSb0?autoplay=1&mute=1&loop=1&playlist=Jc9K_fEsSb0"
+  allow="autoplay"
+  allowfullscreen
+  title="Orokami Villa promotional video"
+  style="border: none;">
+</iframe>
+
+
       <p>
         Orokami Villa おろ神 is a rare sanctuary envisioned atop the cliffs above one of the world’s most celebrated
         beaches in Lefkada — believed by many scholars to be the true Ithaca of Homer’s Odyssey. Hovering between
