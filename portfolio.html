@@ -1,274 +1,318 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio | MI Architects</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="video-background">
-        <video autoplay muted loop>
-           <source src="multimedia/THE ART OF VISUALIZATION - MI ARCHITECTS -.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-    <header>
-        <div class="container">
-            <h1>MI Architects</h1>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="development.html">Development</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="our-story.html">Our Story</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Portfolio | MI Architects</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="multimedia/THE ART OF VISUALIZATION - MI ARCHITECTS -.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
         </div>
-    </header>
 
-    <section id="portfolio">
-    <div class="dark-rectangle">
-        <div class="container">
-            <h2>Our Portfolio</h2>
-            <p>&nbsp;</p>
-            <div class="portfolio-grid">
-                <!-- Portfolio Item 1 -->
-                <div class="portfolio-item" onclick="openSlider(0)">
-                    <img src="multimedia/gallery/killini villa 110/villa kl5.jpg" alt="Luxury Villa KL exterior in Killini, Greece, by MI Architects 2024" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            KL Villa,<br>
-                            Luxury Villa, Residential<br>
-                            2024
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 2 -->
-                <div class="portfolio-item" onclick="openSlider(1)">
-                    <img src="multimedia/gallery/brick house/house out day 2.jpg" alt="Modern Brick House with minimalist exterior design by MI Architects, 2024" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Brick House,<br>
-                            Modern Home, Residential<br>
-                            2024
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 3 -->
-                <div class="portfolio-item" onclick="openSlider(2)">
-                    <img src="multimedia/gallery/kanso haus 簡素/japbath4.jpeg" alt="Japanese-inspired bath in Kanso Haus by MI Architects, 2024" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Kanso Haus 簡素,<br>
-                            Japanese-Scandinavian Fusion, Residential<br>
-                            2024
-                        </div>
-                    </div>
-                </div>
+        <header>
+            <div class="container">
+                <h1>MI Architects</h1>
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="development.html">Development</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-                <!-- Portfolio Item 4 -->
-                <div class="portfolio-item" onclick="openSlider(3)">
-                    <img src="multimedia/gallery/kalino villa/fireplace1.jpeg" alt="Kalino Residence in Croatia with custom fireplace design, by MI Architects, 2023" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Kalino Residence, Croatia,<br>
-                            Custom Residence, Residential<br>
-                            2023
+        <section id="portfolio">
+            <div class="dark-rectangle">
+                <div class="container">
+                    <h2>Our Portfolio</h2>
+                    <p>&nbsp;</p>
+                    <div class="portfolio-grid">
+                        <!-- Portfolio Item 1 -->
+                        <div class="portfolio-item" onclick="openSlider(0)">
+                            <img
+                                src="multimedia/gallery/killini villa 110/villa kl5.jpg"
+                                alt="Luxury Villa KL exterior in Killini, Greece, by MI Architects 2024"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    KL Villa,<br />
+                                    Luxury Villa, Residential<br />
+                                    2024
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 5 -->
-                <div class="portfolio-item" onclick="openSlider(4)">
-                    <img src="multimedia/gallery/ritso/ritso resort1.jpg" alt="Ritso Resort with luxurious exterior in Greece by MI Architects, 2022" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Ritso Resort, Greece,<br>
-                            Luxury Resort, Hospitality<br>
-                            2022
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 6 -->
-                <div class="portfolio-item" onclick="openSlider(5)">
-                    <img src="multimedia/gallery/palm villa/villa palms4.jpeg" alt="French villa Domaine des Palmes with elegant landscaping, 2023 by MI Architects" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Domaine des Palmes, France,<br>
-                            French Villa, Residential<br>
-                            2023
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Portfolio Item 7 -->
-                <div class="portfolio-item" onclick="openSlider(6)">
-                    <img src="multimedia/gallery/kalino villa/kalinovilla0012.jpeg" alt="Cavaro Estate luxury villa exterior in Italy by MI Architects, 2023" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Cavaro Estate, Italy,<br>
-                            Luxury Villa, Residential<br>
-                            2023
+                        <!-- Portfolio Item 2 -->
+                        <div class="portfolio-item" onclick="openSlider(1)">
+                            <img
+                                src="multimedia/gallery/brick house/house out day 2.jpg"
+                                alt="Modern Brick House with minimalist exterior design by MI Architects, 2024"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Brick House,<br />
+                                    Modern Home, Residential<br />
+                                    2024
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Portfolio Item 8 -->
-                <div class="portfolio-item" onclick="openSlider(7)">
-                    <img src="multimedia/gallery/sculpture ceiling/Building Sculptural Ceiling_By MI Architects 19.jpg" alt="Sculptural ceiling design in modern Moscow building by MI Architects, 2024" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Sculptural Ceiling Building, Moscow,<br>
-                            Commercial<br>
-                            2024
+                        <!-- Portfolio Item 3 -->
+                        <div class="portfolio-item" onclick="openSlider(2)">
+                            <img
+                                src="multimedia/gallery/kanso haus 簡素/japbath4.jpeg"
+                                alt="Japanese-inspired bath in Kanso Haus by MI Architects, 2024"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Kanso Haus 簡素,<br />
+                                    Japanese-Scandinavian Fusion, Residential<br />
+                                    2024
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Portfolio Item 9 -->
-                <div class="portfolio-item" onclick="openSlider(8)">
-                    <img src="multimedia/gallery/killini villa big/ilia_villa1.jpg" alt="LEB Seaside Villa coastal architecture in Greece by MI Architects, 2024" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            LEB Seaside Villa, Greece,<br>
-                            Coastal Villa, Residential<br>
-                            2024
+                        <!-- Portfolio Item 4 -->
+                        <div class="portfolio-item" onclick="openSlider(3)">
+                            <img
+                                src="multimedia/gallery/kalino villa/fireplace1.jpeg"
+                                alt="Kalino Residence in Croatia with custom fireplace design, by MI Architects, 2023"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Kalino Residence, Croatia,<br />
+                                    Custom Residence, Residential<br />
+                                    2023
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Portfolio Item 10 -->
-                <div class="portfolio-item" onclick="openSlider(9)">
-                    <img src="multimedia/gallery/co-working moscow/00032.jpeg" alt="Modern co-working space interior in Moscow by MI Architects, 2024" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Beauty Salon, Moscow,<br>
-                            Co-Working Space, Commercial<br>
-                            2024
+                        <!-- Portfolio Item 5 -->
+                        <div class="portfolio-item" onclick="openSlider(4)">
+                            <img
+                                src="multimedia/gallery/ritso/ritso resort1.jpg"
+                                alt="Ritso Resort with luxurious exterior in Greece by MI Architects, 2022"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Ritso Resort, Greece,<br />
+                                    Luxury Resort, Hospitality<br />
+                                    2022
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Portfolio Item 11 -->
-                <div class="portfolio-item" onclick="openSlider(10)">
-                    <img src="multimedia/gallery/serenity circle garden/tower_meditation-1 2.jpeg" alt="Serenity Circle Garden with water meditation space in Spain by MI Architects, 2024" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Serenity Circle Garden, Spain,<br>
-                            Meditation Space, Landscape<br>
-                            2024
+                        <!-- Portfolio Item 6 -->
+                        <div class="portfolio-item" onclick="openSlider(5)">
+                            <img
+                                src="multimedia/gallery/palm villa/villa palms4.jpeg"
+                                alt="French villa Domaine des Palmes with elegant landscaping, 2023 by MI Architects"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Domaine des Palmes, France,<br />
+                                    French Villa, Residential<br />
+                                    2023
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Portfolio Item 12 -->
-                <div class="portfolio-item" onclick="openSlider(11)">
-                    <img src="multimedia/gallery/appartment dinning sofa/dining and sofa3.jpeg" alt="Dining and sofa area in modern office by MI Architects, 2024" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Modern Apartment 24,<br>
-                            Dining Area, Interior Design<br>
-                            2024
+                        <!-- Portfolio Item 7 -->
+                        <div class="portfolio-item" onclick="openSlider(6)">
+                            <img
+                                src="multimedia/gallery/kalino villa/kalinovilla0012.jpeg"
+                                alt="Cavaro Estate luxury villa exterior in Italy by MI Architects, 2023"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Cavaro Estate, Italy,<br />
+                                    Luxury Villa, Residential<br />
+                                    2023
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Portfolio Item 13 -->
-                <div class="portfolio-item" onclick="openSlider(12)">
-                    <img src="multimedia/gallery/renovation voula/apparment renovation voula.jpg" alt="Voula apartment renovation in Greece by MI Architects, 2024" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Apartment, Greece,<br>
-                            Renovation , Residential,<br>
-                            2024
+                        <!-- Portfolio Item 8 -->
+                        <div class="portfolio-item" onclick="openSlider(7)">
+                            <img
+                                src="multimedia/gallery/sculpture ceiling/Building Sculptural Ceiling_By MI Architects 19.jpg"
+                                alt="Sculptural ceiling design in modern Moscow building by MI Architects, 2024"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Sculptural Ceiling Building, Moscow,<br />
+                                    Commercial<br />
+                                    2024
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Portfolio Item 14 -->
-                <div class="portfolio-item" onclick="openSlider(13)">
-                    <img src="multimedia/gallery/infinity villa/infinite_villa.2457.jpeg" alt="Infinity Estate with infinity pool in Greece by MI Architects, 2023" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Infinity Estate, Greece,<br>
-                            Luxury Villa, Residential,<br>
-                            2023
+                        <!-- Portfolio Item 9 -->
+                        <div class="portfolio-item" onclick="openSlider(8)">
+                            <img
+                                src="multimedia/gallery/killini villa big/ilia_villa1.jpg"
+                                alt="LEB Seaside Villa coastal architecture in Greece by MI Architects, 2024"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    LEB Seaside Villa, Greece,<br />
+                                    Coastal Villa, Residential<br />
+                                    2024
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio Item 10 -->
+                        <div class="portfolio-item" onclick="openSlider(9)">
+                            <img
+                                src="multimedia/gallery/co-working moscow/00032.jpeg"
+                                alt="Modern co-working space interior in Moscow by MI Architects, 2024"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Beauty Salon, Moscow,<br />
+                                    Co-Working Space, Commercial<br />
+                                    2024
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio Item 11 -->
+                        <div class="portfolio-item" onclick="openSlider(10)">
+                            <img
+                                src="multimedia/gallery/serenity circle garden/tower_meditation-1 2.jpeg"
+                                alt="Serenity Circle Garden with water meditation space in Spain by MI Architects, 2024"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Serenity Circle Garden, Spain,<br />
+                                    Meditation Space, Landscape<br />
+                                    2024
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio Item 12 -->
+                        <div class="portfolio-item" onclick="openSlider(11)">
+                            <img
+                                src="multimedia/gallery/appartment dinning sofa/dining and sofa3.jpeg"
+                                alt="Dining and sofa area in modern office by MI Architects, 2024"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Modern Apartment 24,<br />
+                                    Dining Area, Interior Design<br />
+                                    2024
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio Item 13 -->
+                        <div class="portfolio-item" onclick="openSlider(12)">
+                            <img
+                                src="multimedia/gallery/renovation voula/apparment renovation voula.jpg"
+                                alt="Voula apartment renovation in Greece by MI Architects, 2024"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Apartment, Greece,<br />
+                                    Renovation , Residential,<br />
+                                    2024
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio Item 14 -->
+                        <div class="portfolio-item" onclick="openSlider(13)">
+                            <img
+                                src="multimedia/gallery/infinity villa/infinite_villa.2457.jpeg"
+                                alt="Infinity Estate with infinity pool in Greece by MI Architects, 2023"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Infinity Estate, Greece,<br />
+                                    Luxury Villa, Residential,<br />
+                                    2023
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio Item 15 -->
+                        <div class="portfolio-item" onclick="openSlider(14)">
+                            <img
+                                src="multimedia/gallery/dream villas/dream villas6.jpg"
+                                alt="Dream Villas, Meditteranean Residence by MI Architects, 2024"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Dream Villas, Greece,<br />
+                                    Luxury Villas, Residential,<br />
+                                    2022
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Portfolio Item 16 -->
+                        <div class="portfolio-item" onclick="openSlider(15)">
+                            <img
+                                src="multimedia/gallery/Casa Sorgente/hqsorgente7-HR.jpg"
+                                alt="Casa Sorgente estate with huge rock interior in Italy by MI Architects, 2024"
+                                class="portfolio-image" />
+                            <div class="overlay">
+                                <div class="caption">
+                                    Casa Sorgente, Italy,<br />
+                                    Luxury Villa, Residential,<br />
+                                    2024
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-				
-				<!-- Portfolio Item 15 -->
-                <div class="portfolio-item" onclick="openSlider(14)">
-                    <img src="multimedia/gallery/dream villas/dream villas6.jpg" alt="Dream Villas, Meditteranean Residence by MI Architects, 2024" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Dream Villas, Greece,<br>
-                            Luxury Villas, Residential,<br>
-                            2022
-                      </div>
-                  </div>
-              </div>
-				
-				<!-- Portfolio Item 16 -->
-                <div class="portfolio-item" onclick="openSlider(15)">
-                  <img src="multimedia/gallery/Casa Sorgente/hqsorgente7-HR.jpg" alt="Casa Sorgente estate with huge rock interior in Italy by MI Architects, 2024" class="portfolio-image">
-                    <div class="overlay">
-                        <div class="caption">
-                            Casa Sorgente, Italy,<br>
-                            Luxury Villa, Residential,<br>
-                            2024
-                      </div>
-                  </div>
-              </div>
-				
-				
-				
-				
-          </div>
+            </div>
+        </section>
+
+        <!-- Fullscreen Slider Modal -->
+        <div id="sliderModal" class="modal" style="display: none">
+            <span class="close" onclick="closeSlider()">&times;</span>
+            <div class="slider-images" id="sliderImages"></div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
-    </div>
-</section>
 
-<!-- Fullscreen Slider Modal -->
-<div id="sliderModal" class="modal" style="display: none;">
-    <span class="close" onclick="closeSlider()">&times;</span>
-    <div class="slider-images" id="sliderImages"></div>
-    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    <a class="next" onclick="changeSlide(1)">&#10095;</a>
-</div>
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form action="contact.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
 
-<section id="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <form action="contact.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
 
-            <button type="submit">Send</button>
-        </form>
-    </div>
-</section>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
 
-<footer>
-    <div class="container">
-        <p>&copy; 2025 MI Architects</p>
-    </div>
-</footer>
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 MI Architects</p>
+            </div>
+        </footer>
 
-<script src="slider.js"></script>
-</body>
+        <script src="slider.js"></script>
+    </body>
 </html>
