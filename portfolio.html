@@ -297,24 +297,24 @@
             <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
 
-        <section id="contact">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <form action="contact.php" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required />
+       
+	<section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="from_name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-        </section>
-
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </div>
+    </section>
         <footer>
             <div class="container">
                 <p>&copy; 2025 MI Architects</p>
