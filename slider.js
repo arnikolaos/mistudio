@@ -119,6 +119,40 @@ const projects = [
     {
         title: "Casa Sorgente",
         images: ["multimedia/gallery/Casa Sorgente/hqsorgente7-HR.jpg"]
+    },
+    {
+        title: "Orokami Villa おろ神",
+        images: ["multimedia/gallery/orokami_villa/orokami_villa_20.jpeg",
+                "multimedia/gallery/orokami_villa/orokami_villa_1.jpeg",
+                "multimedia/gallery/orokami_villa/orokami_villa_kitchen_night.jpeg",
+                "multimedia/gallery/orokami_villa/orokami_villa_18.jpeg",
+                "multimedia/gallery/orokami_villa/orokami_villa_night_pool_cocktail.jpeg",
+                "multimedia/gallery/orokami_villa/orokami_villa_tree.jpeg"
+                ]
+    },
+    {
+        title: "Zathera Villa",
+        images: ["multimedia/gallery/zathera_villa/zathera_villa_10 Large.jpeg",
+                "multimedia/gallery/zathera_villa/zathera_villa_4 Large.jpeg",
+                "multimedia/gallery/zathera_villa/zathera_villa_1 Large.jpeg",
+                "multimedia/gallery/zathera_villa/zathera_villa_11 Large.jpeg"
+                ]
+    },
+    {
+        title: "Sol Canopy",
+        images: ["multimedia/gallery/sol_canopy_pavilion/sol_canopy-2.jpeg",
+                "multimedia/gallery/sol_canopy_pavilion/sol_canopy-3.jpeg",
+                "multimedia/gallery/sol_canopy_pavilion/sol_canopy-4.jpeg"
+                ]
+    },
+    {
+        title: "Shukkah-Pergola",
+        images: ["multimedia/gallery/pergola_shukkah/shukkah-1.jpg",
+                "multimedia/gallery/pergola_shukkah/shukkah-4.jpg",
+                "multimedia/gallery/pergola_shukkah/shukkah-5.jpg",
+                "multimedia/gallery/pergola_shukkah/shukkah_plan-1.jpg",
+                "multimedia/gallery/pergola_shukkah/shukkah_plan-2.jpg"
+                ]
     }
 ];
 
@@ -144,24 +178,36 @@ function openSlider(projectIndex) {
 function closeSlider() {
     document.getElementById("sliderModal").style.display = "none";
 }
-//Jitter Effect Change Slider
+
+//Jitter And Flash Effect Change Slider, Activate one and Deactivate the other
+
 function changeSlide(direction) {
     const sliderImages = document.getElementById("sliderImages").children;
 
-    // Remove 'active' and jitter from the current image
-    sliderImages[currentSlideIndex].classList.remove("active", "jitter");
+    // Remove active + animations from current image
+    sliderImages[currentSlideIndex].classList.remove("active", "jitter", "flash-effect");
 
-    // Move to the next or previous slide
+    // Update index
     currentSlideIndex += direction;
     if (currentSlideIndex < 0) currentSlideIndex = sliderImages.length - 1;
     if (currentSlideIndex >= sliderImages.length) currentSlideIndex = 0;
 
-    // Add 'active' to the new image
-    sliderImages[currentSlideIndex].classList.add("active");
+    // Add active to new image
+    const newImage = sliderImages[currentSlideIndex];
+    newImage.classList.add("active");
 
-    // Add jitter effect to the new image
-    sliderImages[currentSlideIndex].classList.add("jitter");
+    // ✅ Add flash effect
+    void newImage.offsetWidth; // force reflow so animation restarts
+    newImage.classList.add("flash-effect");
+
+    // ❌ Jitter disabled for now
+    // newImage.classList.add("jitter");
 }
+
+
+
+
+
 
 // Default change slides, no effects!
 /*
