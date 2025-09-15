@@ -117,6 +117,18 @@
         </div>
     </footer>
     
+     <!-- Floating Contact Button -->
+    <div class="sticky-contact" onclick="scrollToContact()">Contact Us</div>
+
+    <script>
+        function scrollToContact() {
+            const contactSection = document.getElementById("contact");
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+    </script>
+    
     <!-- Link to custom JavaScript file for form handling -->
     <script src="contact.js"></script>
 </body>

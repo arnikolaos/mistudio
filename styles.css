@@ -719,3 +719,19 @@ body {
   height: 20px;
 }
 
+/* Floating Contact Button */
+.sticky-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* move back to right */
+    background-color: rgba(34, 34, 34, 0.85); /* slightly transparent, same dark color */
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.sticky-contact:hover {
+    opacity: 1; /* full opacity on hover */
+}
