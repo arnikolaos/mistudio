@@ -736,3 +736,30 @@ body {
 .sticky-contact:hover {
     opacity: 1; /* full opacity on hover */
 }
+
+/* Subtle zoom effect only for portfolio.html */
+
+/* Ensure overlay scales with the image *//* Only for portfolio.html: zoom on hover + caption, no darkening */
+.portfolio-page .portfolio-item {
+    overflow: hidden; /* keep everything inside the container */
+}
+
+.portfolio-page .portfolio-item .portfolio-image {
+    transition: transform 0.3s ease; /* smooth zoom */
+    filter: brightness(1); /* ensure image stays normal */
+}
+
+.portfolio-page .portfolio-item .overlay {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.14); /* fully transparent */
+}
+
+.portfolio-page .portfolio-item:hover .portfolio-image {
+    transform: scale(1.05); /* zoom image */
+    filter: brightness(1); /* no darkening on hover */
+}
+
+.portfolio-page .portfolio-item:hover .overlay {
+    opacity: 1; /* show caption */
+    transform: scale(1.05); /* zoom overlay together */
+}
