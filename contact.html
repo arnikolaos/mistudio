@@ -1,96 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MI Architects | Contact</title>
-    <link rel="stylesheet" href="styles.css">
-	<!-- EmailJS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- Initialize EmailJS -->
-    <script>
-        (function() {
-            emailjs.init("vIISw4m27ZLNjGiqT"); // Replace with your actual EmailJS public key
-        })();
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MI Architects | Contact</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Initialize EmailJS -->
+  <script>
+    (function() {
+      emailjs.init("vIISw4m27ZLNjGiqT"); // Replace with your actual EmailJS public key
+    })();
+  </script>
 </head>
 <body>
-    <div class="video-background">
-        <video id="backgroundVideo" autoplay muted loop>
-           <source src="multimedia/THE ART OF VISUALIZATION - MI ARCHITECTS -.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+  <div class="video-background">
+    <video id="backgroundVideo" autoplay muted loop>
+      <source src="multimedia/THE ART OF VISUALIZATION - MI ARCHITECTS -.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- JavaScript to Start the Video at 3:30 -->
+  <script>
+    const video = document.getElementById('backgroundVideo');
+    video.addEventListener('loadedmetadata', function() {
+      if (video.duration > 211) {
+        video.currentTime = 211; // Start video at 3:31
+      }
+    });
+  </script>
+
+  <!-- Header with Menu -->
+  <header>
+    <div class="container">
+      <h1>MI Architects</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="development.html">Development</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- JavaScript to Start the Video at 3:30 -->
-    <script>
-        const video = document.getElementById('backgroundVideo');
-        video.addEventListener('loadedmetadata', function() {
-            // Check if the video's duration is longer than 210 seconds (3:31)
-            if (video.duration > 211) {
-                video.currentTime = 211; // Start video at 3:31 (210 seconds)
-            }
-        });
-    </script>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="dark-rectangle">
+      <div class="container">
+        <h2 style="margin-bottom: 20px;">Let’s Bring Your Vision to Life</h2>
+        <p>We’re here to turn your ideas into stunning visuals and realities. Contact us today to discuss your project.</p>
+        <br>
 
-    <!-- Header with Menu (Consistent with other pages) -->
-    <header>
-        <div class="container">
-            <h1>MI Architects</h1>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="development.html">Development</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="our-story.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        <!-- ✅ WhatsApp Contact -->
+        <p style="text-align: center;  margin-top: 22px; margin-bottom: 15px">
+          <a href="https://wa.me/306947215327" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+            Click to message or call us on WhatsApp
+          </a>
+        </p>
+
+        <p style="text-align: center; font-weight: 500; font-size: 1.15rem">
+          📞
+          <a href="https://wa.me/306947215327" target="_blank" rel="noopener noreferrer" style="font-weight: bold">
+            +30 694 7215327
+          </a>
+          <a href="https://wa.me/306947215327" target="_blank" rel="noopener noreferrer" style="margin-left: 8px; text-decoration: none">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" height="20" style="vertical-align: middle" />
+          </a>,
+          <a href="https://wa.me/306939327149" target="_blank" rel="noopener noreferrer" style="font-weight: bold">
+            +30 693 9327149
+          </a>
+          <a href="https://wa.me/306939327149" target="_blank" rel="noopener noreferrer" style="margin-left: 8px; text-decoration: none">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" height="20" style="vertical-align: middle" />
+          </a>
+        </p>
+        <!-- ✅ End WhatsApp Contact -->
+          <br>
+
+        <div style="text-align: center; margin-top: 20px;">
+          <p><strong>Address:</strong> 27 Pantazi Street<br>Athens, Greece</p>
         </div>
-    </header>
 
-    <!-- Darkened Area for Text -->
-    <section id="contact">
-        <div class="dark-rectangle"> <!-- Darkened background to improve readability -->
-            <div class="container">
-                <h2 style="margin-bottom: 20px;">Let’s Bring Your Vision to Life</h2>
-                <p>We’re here to turn your ideas into stunning visuals and realities. Contact us today to discuss your project.</p>
-				<br>
-                <p><strong>Address:</strong> Pantazi 27, Athens, Greece</p>
-                <p><strong>Phone:</strong> +30 6947215327 | +30 2104400030</p>
-                <p><strong>Email:</strong> arvanitisnic@gmail.com</p>
-
-                <!-- Contact Form (same style as other subpages) -->
-                <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
+        <!-- Contact Form -->
+        <section id="contact">
+          <div class="container">
+            <h2>Or Send Us A Message</h2>
             <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="from_name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="from_name" required>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
 
-                <button type="submit">SEND MESSAGE</button>
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+
+              <button type="submit">SEND MESSAGE</button>
             </form>
-        </div>
-    </section>
-            </div>
-        </div>
-    </section>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer (Consistent with other pages) -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 MI Architects</p>
-        </div>
-    </footer>
-    <!-- Link to custom JavaScript file for form handling -->
-    <script src="contact.js"></script> 
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MI Architects</p>
+    </div>
+  </footer>
+
+  <!-- Contact JS -->
+  <script src="contact.js"></script>
 </body>
 </html>
