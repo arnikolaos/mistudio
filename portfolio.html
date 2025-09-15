@@ -381,6 +381,20 @@
                 <p>&copy; 2025 MI Architects</p>
             </div>
         </footer>
+        
+          <!-- Floating Contact Button -->
+    <div class="sticky-contact" onclick="scrollToContact()">Contact Us</div>
+
+    <script>
+        function scrollToContact() {
+            const contactSection = document.getElementById("contact");
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+    </script>
+
+        
         <!-- Link to slider.js -->
         <script src="slider.js"></script>
         <!-- Link to custom JavaScript file for form handling -->
