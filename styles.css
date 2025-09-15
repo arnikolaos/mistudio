@@ -690,3 +690,32 @@ body {
 .flash-effect {
   animation: flash 0.4s ease-in-out;
 }
+
+/* WhatsApp */
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #25d366; /* WhatsApp green */
+  color: white;
+  font-weight: 600;
+  font-size: 1.15rem;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe57;
+}
+
+.whatsapp-button img {
+  margin-right: 8px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
