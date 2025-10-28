@@ -215,13 +215,13 @@ if (window.location.pathname.includes("portfolio")) {
         overlay.classList.add("fade-in-overlay");
       }
     });
-/*
+
   // 🧭 Enable dynamic rotation on mobile for smoother overlay behavior
   if (window.innerWidth < 768 && !config.dynamicSide) {
     config.dynamicSide = true;
     config.rotationInterval = 5000; // or 4000 for gentle timing
   }
-*/
+
 
 mountOverlay(config);
     mountOverlay(config);
