@@ -1,0 +1,256 @@
+/* ============================================================
+   📐 Publication overlay styles for MI Architects (Responsive Version)
+   ------------------------------------------------------------
+   Same design, now scales elegantly across all screen sizes.
+   ============================================================ */
+
+.publication-overlay {
+  --overlay-offset-x: 0;
+  --overlay-offset-y: -12px;
+  position: fixed;
+  top: clamp(25rem, 45vh, 52rem);
+  right: clamp(1rem, 2vw, 1.5rem);
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1vw, 1rem);
+  padding: clamp(0.5rem, 1vw, 0.75rem) clamp(0.75rem, 1.5vw, 1rem);
+  border-radius: 999px;
+  background: rgba(8, 8, 8, 0.55);
+  color: #ffffff;
+  mix-blend-mode: lighten;
+  opacity: 0;
+  transform: translate3d(var(--overlay-offset-x), var(--overlay-offset-y), 0);
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  z-index: 60;
+  backdrop-filter: blur(6px);
+ /* border: 1px solid rgba(255, 255, 255, 0.25); */
+}
+
+.publication-overlay.overlay-left {
+  left: clamp(1rem, 2vw, 1.5rem);
+  right: auto;
+  justify-content: flex-start;
+}
+
+.publication-overlay.overlay-right {
+  right: clamp(1rem, 2vw, 1.5rem);
+  left: auto;
+  justify-content: flex-end;
+}
+
+.publication-overlay.fade-in-overlay {
+  opacity: 0.85;
+  transform: translate3d(var(--overlay-offset-x), 0, 0);
+}
+
+.publication-overlay__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.publication-overlay__logos {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1.2vw, 0.75rem);
+}
+
+/* ============================================================
+   💨 Prevent overlap when layout compresses horizontally
+   ------------------------------------------------------------
+   Adds automatic wrapping and spacing for the flex layout
+   before the grid phase kicks in.
+   ============================================================ */
+.publication-overlay__logos {
+  flex-wrap: wrap;
+  row-gap: 1.2rem;
+  column-gap: 1.5rem;
+  justify-content: flex-start;
+}
+
+.publication-overlay__logo {
+  height: clamp(22px, 2.8vw, 28px);
+  width: auto;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.publication-overlay__logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.publication-overlay__logo img {
+  display: block;
+  height: 100%;
+  width: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.35));
+}
+
+/* Force overlay to appear on the left */
+.publication-overlay {
+  right: auto !important;
+  left: clamp(1rem, 2vw, 1.5rem) !important;
+  justify-content: flex-start !important;
+}
+
+/* ============================================================
+   🌿 VERTICAL STACKED OVERLAY (Bottom-Left Elegant Mode)
+   ============================================================ */
+
+.publication-overlay {
+  top: auto !important;
+  bottom: clamp(1rem, 3vw, 2rem) !important;
+  left: clamp(1rem, 3vw, 2rem) !important;
+  right: auto !important;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: clamp(0.75rem, 2vw, 2.1rem);
+  padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.25rem);
+  border-radius: 1rem;
+  background: rgba(8, 8, 8, 0.45);
+  opacity: 0.9;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.publication-overlay.fade-in-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.publication-overlay__title {
+  font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+.publication-overlay__logos {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 2.5vw, 2.1rem);
+}
+
+.publication-overlay__logo {
+  height: clamp(22px, 3vw, 28px);
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.publication-overlay__logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .publication-overlay {
+    left: 25%;
+    bottom: clamp(1rem, 3vw, 1.5rem);
+    transform: translateX(-50%);
+    align-items: center;
+    text-align: center;
+  }
+
+  .publication-overlay__logos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(0.4rem, 1.2vw, 0.5rem);
+  }
+}
+
+/* ============================================================
+   ⚖️ INDIVIDUAL LOGO SIZE ADJUSTMENTS (Responsive)
+   ============================================================ */
+
+/* 🧭 Compasses Magazine */
+.publication-overlay__logo img[src*="compasses"] {
+  transform: scale(2.5);
+  transform-origin: center;
+  opacity: 0.95;
+}
+
+/* 🏛️ ArchDaily */
+.publication-overlay__logo img[src*="archdaily"] {
+  transform: scale(1.7);
+  transform-origin: center;
+  opacity: 0.95;
+}
+
+/* 📰 Archetype */
+.publication-overlay__logo img[src*="archetype"] {
+  transform: scale(0.96);
+  transform-origin: center;
+  opacity: 0.95;
+}
+
+/* 🪶 Hotels */
+.publication-overlay__logo img[src*="hotels"] {
+  transform: scale(1.37);
+  transform-origin: center;
+  opacity: 0.95;
+}
+
+
+/* ============================================================
+   📱 Early Grid Activation (~680px)
+   ------------------------------------------------------------
+   Prevents any horizontal stacking before the grid engages.
+   ============================================================ */
+
+@media (max-width: 880px) {
+  .publication-overlay {
+    position: fixed;
+    left: 50% !important;
+    bottom: 1.25rem !important;
+    transform: translateX(-50%) !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 380px; /* slightly wider for better breathing */
+    padding: 0.85rem 1rem;
+    border-radius: 1rem;
+  }
+
+  .publication-overlay__title {
+    text-align: center;
+    font-size: clamp(0.75rem, 3vw, 0.85rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .publication-overlay__logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    justify-items: center;
+    align-items: center;
+    row-gap: 1.6rem;      /* 🪶 more vertical space between rows */
+    column-gap: 1.25rem;  /* balanced horizontal spacing */
+    width: 100%;
+  }
+
+  .publication-overlay__logo {
+    height: clamp(18px, 6vw, 26px);
+    width: auto;
+  }
+
+  .publication-overlay__logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 640px) {
+  .publication-overlay {
+    background: rgba(8, 8, 8, 0.25);
+    opacity: 0.5;
+    scale: 0.85;
+  }
+}
+
