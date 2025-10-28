@@ -253,4 +253,10 @@
     scale: 0.85;
   }
 }
-
+/* 📱 Mobile-only fix for overlay overlap */
+@media (max-width: 768px) {
+  .sticky-contact {
+    bottom: 120px !important; /* lifts button above overlay */
+    right: 15px !important;
+  }
+}
