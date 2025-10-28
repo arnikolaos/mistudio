@@ -44,9 +44,14 @@
       defaultSide: "right",
       dynamicSide: true,
       rotationInterval: 5000
+    },
+    "development.html": {
+      mountSelector: "body",
+      defaultSide: "right",
+      dynamicSide: false,
+      rotationInterval: 6000
     }
   };
-
   const FEATURED_LABEL = "Featured In";
 
   function detectPageKey() {

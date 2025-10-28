@@ -88,16 +88,36 @@
         padding: 2rem;
         font-size: 1rem;
       }
+      
       .sticky-contact {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: rgba(34, 34, 34, 0.82);
-        color: #fff;
-        padding: 1rem;
-        border-radius: 8px;
-        cursor: pointer;
-      }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2); /* translucent white */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #ffffff; /* white text */
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition:
+    background 0.3s ease,
+    backdrop-filter 0.3s ease,
+    color 0.3s ease;
+  z-index: 99999;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.25); /* adds glow for readability */
+}
+
+.sticky-contact:hover {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff; /* keep white text on hover */
+}
+      
       .whatsapp-button {
         display: inline-flex; /* align items horizontally */
         align-items: center; /* vertically center icon and text */
@@ -262,6 +282,25 @@
 }
 
     </style>
+    <style>
+  /* Responsive fix for small screens */
+  @media (max-width: 900px) {
+    .sticky-contact {
+      bottom: 90px; /* moves it up from the overlay */
+      right: 15px;
+      padding: 0.85rem 1.25rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .sticky-contact {
+      bottom: 110px; /* even higher on very small screens */
+      right: 10px;
+      font-size: 0.9rem;
+    }
+  }
+</style>
 
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -271,6 +310,42 @@
         emailjs.init("vIISw4m27ZLNjGiqT"); // Replace with your actual EmailJS public key
       })();
     </script>
+    <!-- Publications Overlay CSS File Link -->
+    <link rel="stylesheet" href="overlay_publications.css" />
+    
+   <style>
+     /* Overlay recolor (white translucent version) – for development page */
+     body .publication-overlay {
+       background: rgba(255, 255, 255, 0.2) !important; /* white with transparency */
+       border: 1px solid rgba(0, 0, 0, 0.08) !important; /* subtle border for definition */
+       color: #111 !important; /* dark text for contrast */
+       backdrop-filter: blur(8px) !important; /* soft frosted-glass effect */
+       -webkit-backdrop-filter: blur(8px) !important; /* Safari support */
+       mix-blend-mode: normal !important; /* ensures it stays natural on cream bg */
+       transition:
+         background 0.3s ease,
+         backdrop-filter 0.3s ease,
+         opacity 0.3s ease;
+     }
+
+     body .publication-overlay:hover {
+       background: rgba(255, 255, 255, 0.75) !important; /* lighter on hover */
+       backdrop-filter: blur(10px) !important;
+       -webkit-backdrop-filter: blur(10px) !important;
+     }
+
+     body .publication-overlay__title {
+       opacity: 0.8 !important;
+     }
+
+     /* 🎨 Only the “Featured In” title text stays pure white */
+     body .publication-overlay__title {
+       color: #ffffff !important;
+       opacity: 0.9 !important;
+       text-shadow: 0 0 6px rgba(0, 0, 0, 0.25); /* optional glow for clarity */
+     }
+   </style>
+    
   </head>
   <body>
     <!-- This is for ensure that overlay will be shown correctly -->
@@ -740,5 +815,9 @@
   })();
 </script>
 
+    <!-- Publications Overlay Script -->
+    
+    <script src="overlay_publications.js" defer></script>
+    
   </body>
 </html>
