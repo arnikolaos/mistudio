@@ -60,9 +60,11 @@
     if (!segment || segment === "") {
       return "index.html";
     }
+    if (!segment.includes(".html")) {
+      return segment.toLowerCase() + ".html";
+    }
     return segment.toLowerCase();
   }
-
   function createOverlayContainer(defaultSide) {
     const overlay = document.createElement("aside");
     overlay.className = "publication-overlay";
