@@ -43,7 +43,7 @@
       mountSelector: "body",
       defaultSide: "right",
       dynamicSide: true,
-      rotationInterval: 5000
+      rotationInterval: 2800
     },
     "development.html": {
       mountSelector: "body",
@@ -126,14 +126,28 @@
     const singleLogo = createLogoElement(logos[currentIndex]);
     wrapper.appendChild(singleLogo);
     setOverlaySide(overlay, logos[currentIndex].side, config.defaultSide);
+const rotate = () => {
+  currentIndex = (currentIndex + 1) % logos.length;
+// ✨ Smooth fade transition for portfolio dynamic rotation
+if (window.location.pathname.includes("portfolio")) {
+  singleLogo.classList.add("fade-out");
 
-    const rotate = () => {
-      currentIndex = (currentIndex + 1) % logos.length;
-      updateLogoElement(singleLogo, logos[currentIndex]);
-      setOverlaySide(overlay, logos[currentIndex].side, config.defaultSide);
-      rotationId = window.setTimeout(rotate, config.rotationInterval);
-    };
+  setTimeout(() => {
+    updateLogoElement(singleLogo, logos[currentIndex]);
+    singleLogo.classList.remove("fade-out");
+    singleLogo.classList.add("fade-in");
 
+    // remove fade-in after animation completes
+    setTimeout(() => {
+      singleLogo.classList.remove("fade-in");
+    }, 1700); // match CSS fade duration
+  }, 600); // wait for fade-out to nearly finish before swap
+} else {
+  updateLogoElement(singleLogo, logos[currentIndex]);
+}
+  setOverlaySide(overlay, logos[currentIndex].side, config.defaultSide);
+  rotationId = window.setTimeout(rotate, config.rotationInterval);
+};
     const pauseRotation = () => {
       if (rotationId) {
         window.clearTimeout(rotationId);

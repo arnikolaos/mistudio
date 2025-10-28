@@ -197,6 +197,15 @@
 }
 
 
+/* ✨ Smooth fade transition for dynamic logo rotation */
+.publication-overlay__logo img {
+  transition: opacity 0.6s ease-in-out;
+}
+
+.publication-overlay__logo.fade-out img {
+  opacity: 0;
+}
+
 /* ============================================================
    📱 Early Grid Activation (~680px)
    ------------------------------------------------------------
