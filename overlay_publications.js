@@ -223,7 +223,7 @@ if (window.location.pathname.includes("portfolio")) {
   }
 
 
-mountOverlay(config);
+
     mountOverlay(config);
   }
   if (document.readyState === "loading") {
