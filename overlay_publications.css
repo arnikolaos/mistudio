@@ -262,10 +262,26 @@
     scale: 0.85;
   }
 }
-/* 📱 Mobile-only fix for overlay overlap */
-@media (max-width: 768px) {
-  .sticky-contact {
-    bottom: 120px !important; /* lifts button above overlay */
-    right: 15px !important;
+
+/* 📱 Fine-tuned frosty overlay – only for development page one-icon mode 04/10/25 */
+@media (max-width: 640px) {
+  body.dev-page .publication-overlay {
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+    width: auto !important;
+    height: auto !important;
+    padding: clamp(0.4rem, 2vw, 0.8rem) clamp(0.6rem, 3vw, 1rem) !important;
+    border-radius: 0.9rem !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* 🧭 Icon scales smoothly with the background */
+  body.dev-page .publication-overlay__logo img {
+    height: clamp(22px, 7vw, 32px) !important;
+    width: auto !important;
   }
 }
