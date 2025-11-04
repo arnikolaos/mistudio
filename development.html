@@ -319,13 +319,29 @@
        background: rgba(255, 255, 255, 0.2) !important; /* white with transparency */
        border: 1px solid rgba(0, 0, 0, 0.08) !important; /* subtle border for definition */
        color: #111 !important; /* dark text for contrast */
-       backdrop-filter: blur(8px) !important; /* soft frosted-glass effect */
-       -webkit-backdrop-filter: blur(8px) !important; /* Safari support */
+       backdrop-filter: blur(5px) !important; /* soft frosted-glass effect */
+       -webkit-backdrop-filter: blur(5px) !important; /* Safari support */
        mix-blend-mode: normal !important; /* ensures it stays natural on cream bg */
        transition:
          background 0.3s ease,
          backdrop-filter 0.3s ease,
          opacity 0.3s ease;
+     }
+
+     /* 📱 When only one icon shows (mobile) — make frosty box smaller & closer - 04/10/25 */
+     @media (max-width: 640px) {
+       body .publication-overlay {
+         background: rgba(255, 255, 255, 0.25) !important; /* slightly denser frost */
+         backdrop-filter: blur(6px) !important;
+         -webkit-backdrop-filter: blur(6px) !important;
+         width: fit-content !important;
+         height: fit-content !important;
+         padding: 0.5rem 0.8rem !important; /* tighter to icon */
+         border-radius: 0.9rem !important;
+         left: 50% !important;
+         transform: translateX(-50%) !important;
+         bottom: 1.4rem !important;
+       }
      }
 
      body .publication-overlay:hover {
@@ -341,7 +357,7 @@
      /* 🎨 Only the “Featured In” title text stays pure white */
      body .publication-overlay__title {
        color: #ffffff !important;
-       opacity: 0.9 !important;
+       opacity: 0.7 !important;
        text-shadow: 0 0 6px rgba(0, 0, 0, 0.25); /* optional glow for clarity */
      }
    </style>
