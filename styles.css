@@ -724,7 +724,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px; /* move back to right */
-    background-color: rgba(34, 34, 34, 0.72); /* slightly transparent, same dark color */
+    background-color: rgba(34, 34, 34, 0.42); /* slightly transparent, same dark color */
     color: #fff;
     padding: 1rem;
     border-radius: 8px;
