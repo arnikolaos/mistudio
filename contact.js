@@ -15,19 +15,10 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     existing.value = window.location.hostname;
 
     // 1. send to admin
-    emailjs.sendForm("mistudio", "mitemplate", form)
+    emailjs
+        .sendForm("mistudio", "mitemplate", form)
         .then(function (response) {
             console.log("ADMIN SENT!", response.status, response.text);
-
-            // 2. send auto-reply ONLY after admin succeeds
-            emailjs.sendForm("mistudio", "client_reply", form)
-                .then(function (response) {
-                    console.log("CLIENT SENT!", response.status, response.text);
-                })
-                .catch(function (error) {
-                    console.log("CLIENT FAILED", error);
-                });
-
         })
         .catch(function (error) {
             console.log("ADMIN FAILED", error);
