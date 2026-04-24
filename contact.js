@@ -18,18 +18,19 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     emailjs.sendForm("mistudio", "mitemplate", form)
         .then(function (response) {
             console.log("ADMIN SENT!", response.status, response.text);
+
+            // 2. send auto-reply ONLY after admin succeeds
+            emailjs.sendForm("mistudio", "client_reply", form)
+                .then(function (response) {
+                    console.log("CLIENT SENT!", response.status, response.text);
+                })
+                .catch(function (error) {
+                    console.log("CLIENT FAILED", error);
+                });
+
         })
         .catch(function (error) {
             console.log("ADMIN FAILED", error);
-        });
-
-    // 2. send auto-reply to client
-    emailjs.sendForm("mistudio", "client_reply", form)
-        .then(function (response) {
-            console.log("CLIENT SENT!", response.status, response.text);
-        })
-        .catch(function (error) {
-            console.log("CLIENT FAILED", error);
         });
 
     alert("Message sent successfully!");
