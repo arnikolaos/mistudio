@@ -288,6 +288,18 @@
       {
         "file": "IMG-4f2270a4a87e39023dfd93db41c4a2ce-V.jpg",
         "caption": "Finished edge and textured paving"
+      },
+      {
+        "file": "IMG-3e45538bd00984645f05dc5bdecfaa04-V.jpg",
+        "caption": "Stone façade and clean architectural lines"
+      },
+      {
+        "file": "IMG-25f8b946917f0278dd520bde25117f2d-V.jpg",
+        "caption": "Finished pool and mineral terrace"
+      },
+      {
+        "file": "IMG-9459250cdd0e194f837e651ab99e139b-V.jpg",
+        "caption": "Residence with timber-clad upper volume"
       }
     ],
     "description": "Hand-applied microcement (patiti tsimentokonia), sculpted built-in furniture and carefully finished pools, stairs and interior surfaces."
@@ -363,10 +375,6 @@
         "caption": "Preparing the exterior envelope"
       },
       {
-        "file": "IMG-14c2e692713120fb204a8083ec93dc53-V.jpg",
-        "caption": "Stone surface detail"
-      },
-      {
         "file": "IMG-2d3862685ae305f1d63ebf4c89555e06-V.jpg",
         "caption": "Walls within the structural frame"
       },
@@ -405,6 +413,22 @@
         "caption": "Architectural visualisation — the villa complex",
         "folder": "PLATINIUM - ΑΘΑΝΙ",
         "asset_slug": "athani-residences"
+      },
+      {
+        "file": "IMG-d7d4aa1f2758b26a281a1fb5f0d1fe13-V.jpg",
+        "caption": "The construction team on site"
+      },
+      {
+        "file": "IMG-a8957867e9ff7142189e366ab56d10be-V.jpg",
+        "caption": "Working beneath the timber roof"
+      },
+      {
+        "file": "IMG-88e3e278df6a587eece3088471f480c2-V.jpg",
+        "caption": "Building the pool shell"
+      },
+      {
+        "file": "IMG-1f54efe0d491efce7c566e86b5b0fe20-V.jpg",
+        "caption": "Shaping the pool structure above the coast"
       }
     ],
     "aliases": [
@@ -417,6 +441,10 @@
     "title": "Ground & Frame",
     "subtitle": "Commercial building · Groundworks & structure",
     "images": [
+      {
+        "file": "IMG-3a7e111b8da9e05742df9c908e98d607-V.jpg",
+        "caption": "The steel frame above the foundations"
+      },
       {
         "file": "IMG-156648eb5ab70d6a3518870132585c1f-V.jpg",
         "caption": "The structural grid"
@@ -454,10 +482,6 @@
         "caption": "Reinforcement before the pour"
       },
       {
-        "file": "IMG-3a7e111b8da9e05742df9c908e98d607-V.jpg",
-        "caption": "The steel frame above the foundations"
-      },
-      {
         "file": "IMG-55c78c51020d0ad181cfda934ec26db2-V.jpg",
         "caption": "Setting the concrete beams"
       },
@@ -492,6 +516,26 @@
       {
         "file": "IMG-ef51aff17766429604d3bba007bd5250-V.jpg",
         "caption": "Earthmoving and site preparation"
+      },
+      {
+        "file": "IMG-f88f12e0934fde1c85cb37e52bfa8bc2-V.jpg",
+        "caption": "Steel frame and foundation works"
+      },
+      {
+        "file": "IMG-a03d833a0697f69f674168eed1043f29-V.jpg",
+        "caption": "Preparing the ground for the next stage"
+      },
+      {
+        "file": "IMG-cd32dcad48487d5b56dbc807867b2ecd-V.jpg",
+        "caption": "The team on site in the evening light"
+      },
+      {
+        "file": "IMG-a6013003b3031687db12d638930b12ff-V.jpg",
+        "caption": "Excavation and site clearance"
+      },
+      {
+        "file": "IMG-9b730b5a303d93a530f58d52c3c8c871-V.jpg",
+        "caption": "Concrete structure within the formwork"
       }
     ],
     "description": "Construction of a commercial building, from foundations and concrete works to the steel frame."
@@ -500,7 +544,7 @@
     "folder": "kalamitsi",
     "slug": "kalamitsi",
     "title": "Kalamitsi",
-    "subtitle": "Structure · Interior finishes",
+    "subtitle": "Renovation & conversion · An existing home renewed",
     "images": [
       {
         "file": "IMG-034fd9a9628684efc8590169fde50e6d-V.jpg",
@@ -525,8 +569,65 @@
       {
         "file": "IMG-29ef80d42bb5aa9e7617d9093d0468cb-V.jpg",
         "caption": "Laying the interior floor"
+      },
+      {
+        "file": "IMG-f7559f24986f613f3500db274d394e4c-V.jpg",
+        "caption": "Renovating the interior around existing stonework"
+      },
+      {
+        "file": "IMG-d25e27cf5957482587578ae54b345af1-V.jpg",
+        "caption": "New floor within the original stone walls"
+      },
+      {
+        "file": "IMG-d94ffaee8054c2d8b9bc7459addb1fe4-V.jpg",
+        "caption": "Bathroom finishes in the renovated home"
+      },
+      {
+        "file": "IMG-873a6fee953557673bc427c87263c8d5-V.jpg",
+        "caption": "Courtyard and building levels"
+      },
+      {
+        "file": "IMG-44dd6f9f9cef5d3f941546ab2a416d61-V.jpg",
+        "caption": "Stone walls retained within the new interior"
+      },
+      {
+        "file": "IMG-3bc9774fcb865c2ac86e3419775b67d1-V.jpg",
+        "caption": "The team preparing the interior floor"
+      },
+      {
+        "file": "IMG-02299c9d9e9a9d322b4ef3d3873db42d-V.jpg",
+        "caption": "Laying new floor finishes"
+      },
+      {
+        "file": "IMG-4b35a8ed72dfc9d2fabe2d33d1e1272d-V.jpg",
+        "caption": "Timber eaves and terrace column"
+      },
+      {
+        "file": "IMG-3e11c26d936315d62a45d2dadd419567-V.jpg",
+        "caption": "Finishing the window reveal"
+      },
+      {
+        "file": "IMG-8f1a28590de4dccbdbb6da942d9b028c-V.jpg",
+        "caption": "Original stonework beneath the timber roof"
+      },
+      {
+        "file": "IMG-5746e8fb44c55f75aaba771b6df38c11-V.jpg",
+        "caption": "Terrace outlook during renovation"
+      },
+      {
+        "file": "IMG-da09a308a6e8a657fb808b3817d739c8-V.jpg",
+        "caption": "Preparing the floor within the existing shell"
+      },
+      {
+        "file": "IMG-570102064c8674ae906606df5985cdbc-V.jpg",
+        "caption": "New floor finishes and protected fittings"
+      },
+      {
+        "file": "IMG-9c81faaa914052123f8d8b85b1527ad6-V.jpg",
+        "caption": "Reinforcement for the structural works"
       }
-    ]
+    ],
+    "description": "Renovation and conversion of an old residence into a renewed home, bringing together structural works, restored stonework and new interior finishes."
   },
   {
     "folder": "perigiali",
@@ -557,6 +658,62 @@
       {
         "file": "IMG-083ea96e677deca0a2a3e50ff90db24f-V.jpg",
         "caption": "Working with the terrain"
+      },
+      {
+        "file": "IMG-1122d4a5bea9859c40365880bd7b5bde-V.jpg",
+        "caption": "Excavation beside the building"
+      },
+      {
+        "file": "IMG-90120ec6af9e7cb6635f10e17e6c3551-V.jpg",
+        "caption": "Earthmoving and site logistics"
+      },
+      {
+        "file": "IMG-d520e0abe9dea8e90da8bd4b6705f67b-V.jpg",
+        "caption": "Masonry within the concrete frame"
+      },
+      {
+        "file": "IMG-db56d68e7f86f5062c49abeb6052ca5e-V.jpg",
+        "caption": "Façade works from the scaffolding"
+      },
+      {
+        "file": "IMG-effa084155e10baae795139a439cd359-V.jpg",
+        "caption": "Hand finishing the concrete surface"
+      },
+      {
+        "file": "IMG-ec3b7383894cc237126d6497c5cd5917-V.jpg",
+        "caption": "Preparing the service trench"
+      },
+      {
+        "file": "IMG-cfbc7d8f76edeedf6f28023433250302-V.jpg",
+        "caption": "Working at the service junction"
+      },
+      {
+        "file": "IMG-babad6b62ae485e428a80934776ad5bf-V.jpg",
+        "caption": "Interior structure before finishing"
+      },
+      {
+        "file": "IMG-74159536f8dce94a5525658dddf40735-V.jpg",
+        "caption": "Groundworks around the residence"
+      },
+      {
+        "file": "IMG-44b78b85baf3bee0e436a396c61e513a-V.jpg",
+        "caption": "Construction between the building volumes"
+      },
+      {
+        "file": "IMG-60aa805b808f88d738cc435e3e459f3c-V.jpg",
+        "caption": "Interior floor preparation"
+      },
+      {
+        "file": "IMG-580cc496b95656ee2ad16c1316de42bf-V.jpg",
+        "caption": "The team during a site walkthrough"
+      },
+      {
+        "file": "IMG-c7dbde10e8c629f08b9f8f34ec03aa79-V.jpg",
+        "caption": "Excavating along the building edge"
+      },
+      {
+        "file": "IMG-463e257ef0bdb9e9b963c679bd259eff-V.jpg",
+        "caption": "The residence and its changing ground levels"
       }
     ]
   },
@@ -729,6 +886,14 @@
       {
         "file": "IMG-45b8b191e8f79058f86995d966793792-V.jpg",
         "caption": "Interior floor preparation"
+      },
+      {
+        "file": "IMG_20230526_124508_9.jpg",
+        "caption": "Building frontage and site approach"
+      },
+      {
+        "file": "IMG-072cd605bce3f1ae5b7eda89d5caeabd-V.jpg",
+        "caption": "Setting out in the landscape"
       }
     ]
   },
