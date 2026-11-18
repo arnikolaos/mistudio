@@ -41,3 +41,6 @@
 .c-intro-copy>.c-text-link.c-explore-settled{animation:none;opacity:1;transform:none}
 .c-intro-copy>.c-text-link.c-explore-settled:hover,.c-intro-copy>.c-text-link.c-explore-settled:focus-visible{opacity:1}
 @media(prefers-reduced-motion:reduce){.c-intro-copy>.c-text-link.c-explore-settled{opacity:1}}
+
+/* MI Architects — concise context for material and construction journals. */
+.c-project-description{max-width:650px;color:var(--c-muted);font-size:14px;line-height:1.8;margin:24px 0 0}

@@ -44,3 +44,5 @@ Existing stylesheets, slider scripts, forms, logos, videos and original media ar
 ## Site atmosphere
 
 `site-atmosphere.css`, `site-atmosphere.js` and `site-grain.svg` add static 2% grain to text/header surfaces and a subtle desktop pointer light. Photographic galleries are excluded. Development keeps its existing origami canvas and does not load this module. Pointer updates are event-driven, with no continuous animation loop; touch and reduced-motion modes disable the light. The Construction Explore link enters once from above and remains at full opacity.
+
+Optional project `description` text adds a concise paragraph beneath the project heading; use this for verified scope and craftsmanship details without changing the gallery layout.
