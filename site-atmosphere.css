@@ -1,0 +1,9 @@
+/* MI Architects — quiet texture and light on text surfaces only. */
+.mi-atmosphere-static{position:relative}
+.mi-atmosphere-layer{position:absolute;inset:0;display:block;overflow:hidden;border-radius:inherit;pointer-events:none!important;user-select:none;z-index:0}
+.mi-atmosphere-layer::before{content:"";position:absolute;inset:0;background-image:url("site-grain.svg");background-repeat:repeat;background-size:128px 128px;opacity:.02;pointer-events:none}
+.mi-atmosphere-light{position:absolute;left:0;top:0;display:block;width:560px;height:560px;margin:-280px 0 0 -280px;background:radial-gradient(circle,rgba(240,221,188,.065),rgba(240,221,188,.025) 35%,transparent 68%);opacity:0;pointer-events:none;transition:opacity .4s ease}
+.mi-atmosphere-layer.is-lit .mi-atmosphere-light{opacity:1}
+@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.mi-atmosphere-light{display:none!important;transition:none}}
+@media(forced-colors:active){.mi-atmosphere-layer{display:none}}
+@media print{.mi-atmosphere-layer{display:none}}

@@ -28,16 +28,16 @@
  .c-hero-material{animation:c-material-in .9s .08s var(--c-ease) both}
  .c-hero-built{animation:c-built-in .9s .16s var(--c-ease) both}
  .c-intro-text .c-letter{animation:c-letter-in .24s calc(1.02s + var(--letter-order)*.012s) ease-out both}
- .c-intro-copy>.c-text-link{animation:c-explore-settle .4s 2.05s ease-out both}
- .c-intro-copy>.c-text-link:hover,.c-intro-copy>.c-text-link:focus-visible{animation:none;opacity:1}
+ .c-intro-copy>.c-text-link{animation:c-explore-enter .4s 2.05s ease-out both}
+ .c-intro-copy>.c-text-link:focus-visible{animation:none;opacity:1;transform:none}
 }
 @keyframes c-hero-bloom{from{opacity:.2;transform:scale(1.075);filter:saturate(.9) brightness(1.15) blur(5px)}to{opacity:1;transform:scale(1);filter:saturate(.9) contrast(1.035) brightness(1.015)}}
 @keyframes c-vision-in{from{opacity:0;transform:translateX(-32px);filter:blur(5px)}to{opacity:1;transform:none;filter:blur(0)}}
 @keyframes c-material-in{from{opacity:0;transform:translateX(32px);filter:blur(5px)}to{opacity:1;transform:none;filter:blur(0)}}
 @keyframes c-built-in{from{opacity:0;transform:translateY(24px);filter:blur(5px)}to{opacity:1;transform:none;filter:blur(0)}}
 @keyframes c-letter-in{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
-@keyframes c-explore-settle{from{opacity:1}to{opacity:.65}}
+@keyframes c-explore-enter{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
 
-.c-intro-copy>.c-text-link.c-explore-settled{animation:none;opacity:.65;transition:opacity .25s}
+.c-intro-copy>.c-text-link.c-explore-settled{animation:none;opacity:1;transform:none}
 .c-intro-copy>.c-text-link.c-explore-settled:hover,.c-intro-copy>.c-text-link.c-explore-settled:focus-visible{opacity:1}
 @media(prefers-reduced-motion:reduce){.c-intro-copy>.c-text-link.c-explore-settled{opacity:1}}
