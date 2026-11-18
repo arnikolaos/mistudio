@@ -16,7 +16,7 @@ The editable catalogue is `construction/projects.json`. Each entry has a source 
 - Run `python3 scripts/build_construction.py --inventory` to list candidate files, with hero/cover cues and numeric names first. This does not publish anything.
 - Add a project by duplicating an entry with a unique slug. Add images by appending file/caption objects. Existing URLs remain stable when new projects are added.
 - Review source images first. Prefer `hero`, `put first`, and `cover`, followed by numbered files in numeric order (1, 2, 3, … 15 … 30). The catalogue's explicit order is authoritative; its first image is the cover.
-- Preserve the initial project order: ben, domisi kai texnotropia frd, platinum, malfas. The separate Athani folder is retained as a separate journal pending confirmation that it belongs to Platinum.
+- Preserve the initial project order: ben, domisi kai texnotropia frd, platinum, malfas. Platinum and Athani are one project. Per-image `folder` and `asset_slug` overrides reuse both source collections and existing derivatives; the old Athani URL redirects to Platinum.
 - Choose a varied, concise selection rather than every similar shot. Do not publish messaging screenshots, supplier cards, private drawings, or random duplicates. Label renders as design studies. Describe only what the image shows; do not invent completion dates, locations or technical certifications.
 - Keep the original file unchanged. Run `python3 scripts/build_construction.py` (requires ImageMagick `magick`). An alternative source folder can be passed with `--source`.
 - The builder writes the index, reusable static project pages and two ungraded WebP sizes per selected photograph. Content hashes avoid re-encoding unchanged assets. It never deletes source files. Review obsolete derivative assets before manually removing them when a selection changes.
@@ -26,7 +26,7 @@ The editable catalogue is `construction/projects.json`. Each entry has a source 
 
 `construction.css` contains the complete Construction visual system. Grading is CSS-only: saturation 0.9, contrast 1.035, brightness 1.015, and a very faint tonal overlay. Hover or keyboard focus reveals the ungraded photo. The full-screen gallery always displays the ungraded image.
 
-`construction.js` provides one-time scroll reveals, native-dialog galleries, arrow keys, Escape, focus restoration and horizontal touch gestures. All content and project links work without JavaScript. Reduced-motion preferences disable reveal and transition effects.
+`construction.js` provides a one-time cinematic hero opening and letter reveal, plus one-time scroll reveals, native-dialog galleries, arrow keys, Escape, focus restoration and horizontal touch gestures. All content and project links work without JavaScript. Reduced-motion preferences disable reveal and transition effects.
 
 `site-navigation.css` and `site-navigation.js` handle the primary page navigation and home Construction entry. Desktop links retain their existing styles. Navigation collapses based on available space, with a phone fallback, and closes on selection, outside click, focus leaving the menu, or Escape. No animation libraries or runtime build are required.
 

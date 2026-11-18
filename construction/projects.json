@@ -3,7 +3,7 @@
     "folder": "ben",
     "slug": "terraced-horizon",
     "title": "Terraced Horizon",
-    "subtitle": "Stone terraces · Coastal residence",
+    "subtitle": "Earth-sheltered villa complex · Coastal construction",
     "images": [
       {
         "file": "1.jpg",
@@ -71,7 +71,7 @@
     "folder": "domisi kai texnotropia frd",
     "slug": "contour-and-water",
     "title": "Contour & Water",
-    "subtitle": "Pools · Surfaces · Craft",
+    "subtitle": "Villas · Pools · Material craft",
     "images": [
       {
         "file": "put first.jpg",
@@ -106,9 +106,57 @@
   {
     "folder": "platinum",
     "slug": "platinum",
-    "title": "Platinum",
-    "subtitle": "Structure · Envelope",
+    "title": "Platinum — Athani",
+    "subtitle": "Villa construction · Athani, Lefkada",
     "images": [
+      {
+        "file": "00003012-PHOTO-2026-10-24-20-29-03.jpg",
+        "caption": "Façade and groundworks",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
+      },
+      {
+        "file": "1.jpg",
+        "caption": "Terraces under construction",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
+      },
+      {
+        "file": "2.jpg",
+        "caption": "Interior finishing",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
+      },
+      {
+        "file": "3.jpg",
+        "caption": "Working beneath the timber roof",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
+      },
+      {
+        "file": "4.jpg",
+        "caption": "The emerging building",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
+      },
+      {
+        "file": "5.jpg",
+        "caption": "The coastal setting",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
+      },
+      {
+        "file": "00003014-PHOTO-2026-10-24-20-29-04.jpg",
+        "caption": "White volumes among olive trees",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
+      },
+      {
+        "file": "00003023-PHOTO-2026-10-24-20-34-03.jpg",
+        "caption": "Preparing the building envelope",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
+      },
       {
         "file": "IMG-0842b93f157829705911e1c4804fd2e6-V.jpg",
         "caption": "Concrete frame and masonry"
@@ -132,7 +180,46 @@
       {
         "file": "IMG-2d3862685ae305f1d63ebf4c89555e06-V.jpg",
         "caption": "Walls within the structural frame"
+      },
+      {
+        "file": "00003041-PHOTO-2026-10-24-20-43-06.jpg",
+        "caption": "The façade taking shape",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
+      },
+      {
+        "file": "00003042-PHOTO-2026-10-24-20-43-07.jpg",
+        "caption": "Pool structure beside the villas",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
+      },
+      {
+        "file": "00003099-PHOTO-2026-10-30-16-14-18.jpg",
+        "caption": "Interior masonry and timber roof",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
+      },
+      {
+        "file": "00003103-PHOTO-2026-10-30-16-16-10.jpg",
+        "caption": "Openings onto the terrace",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
+      },
+      {
+        "file": "00003109-PHOTO-2026-10-30-16-17-03.jpg",
+        "caption": "Retaining walls and coastal outlook",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
+      },
+      {
+        "file": "00003055-PHOTO-2026-10-24-21-18-49.jpg",
+        "caption": "Architectural visualisation — the villa complex",
+        "folder": "PLATINIUM - ΑΘΑΝΙ",
+        "asset_slug": "athani-residences"
       }
+    ],
+    "aliases": [
+      "athani-residences"
     ]
   },
   {
@@ -164,46 +251,6 @@
       {
         "file": "IMG-3249294685f41dd96cb1ef70842b36c6-V.jpg",
         "caption": "Framing the landscape"
-      }
-    ]
-  },
-  {
-    "folder": "PLATINIUM - ΑΘΑΝΙ",
-    "slug": "athani-residences",
-    "title": "Athani Residences",
-    "subtitle": "Athani · Construction",
-    "images": [
-      {
-        "file": "1.jpg",
-        "caption": "Terraces under construction"
-      },
-      {
-        "file": "2.jpg",
-        "caption": "Interior finishing"
-      },
-      {
-        "file": "3.jpg",
-        "caption": "Working beneath the timber roof"
-      },
-      {
-        "file": "4.jpg",
-        "caption": "The emerging building"
-      },
-      {
-        "file": "5.jpg",
-        "caption": "The coastal setting"
-      },
-      {
-        "file": "00003012-PHOTO-2026-10-24-20-29-03.jpg",
-        "caption": "Façade and groundworks"
-      },
-      {
-        "file": "00003014-PHOTO-2026-10-24-20-29-04.jpg",
-        "caption": "White volumes among olive trees"
-      },
-      {
-        "file": "00003023-PHOTO-2026-10-24-20-34-03.jpg",
-        "caption": "Preparing the building envelope"
       }
     ]
   },
@@ -402,8 +449,8 @@
   {
     "folder": "santas",
     "slug": "courtyard-elevation",
-    "title": "Courtyard Elevation",
-    "subtitle": "Façade works",
+    "title": "Courtyard Residence",
+    "subtitle": "Complete residential construction · From ground to finish",
     "images": [
       {
         "file": "IMG-3085a9e6f1dd311b8aeceafd8525428a-V.jpg",
@@ -446,20 +493,20 @@
   {
     "folder": "therianos",
     "slug": "garden-court",
-    "title": "Garden Court",
-    "subtitle": "Hospitality · Architecture",
+    "title": "Hotel Leykas",
+    "subtitle": "Hospitality · From render to built",
     "images": [
       {
+        "file": "IMG-faf46bc7c36c4e049c686cbfef19c9e9-V.jpg",
+        "caption": "Hotel Leykas — the built arrival façade"
+      },
+      {
         "file": "IMG-621a72034c7dd93418054c70ea5dbb34-V.jpg",
-        "caption": "Garden-facing elevation"
+        "caption": "Architectural visualisation — garden-facing elevation"
       },
       {
         "file": "IMG-ba23b954e08b42cd11170968d6b0362f-V.jpg",
-        "caption": "Pool and courtyard"
-      },
-      {
-        "file": "IMG-faf46bc7c36c4e049c686cbfef19c9e9-V.jpg",
-        "caption": "The arrival façade"
+        "caption": "Built hotel — pool and courtyard"
       }
     ]
   },

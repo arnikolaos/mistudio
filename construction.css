@@ -17,3 +17,27 @@
 @media(max-width:1000px){.c-header{gap:20px}.c-header nav ul{gap:14px}.c-intro{min-height:650px}.c-intro-image{min-height:650px}}
 @media(max-width:700px){.c-header{padding:25px 5vw}.c-brand{font-size:17px}.c-intro{display:flex;flex-direction:column;min-height:0}.c-intro-copy{padding:55px 6vw 40px}.c-intro h1{font-size:78px;margin:22px 0}.c-intro-image{min-height:0;height:72svh;max-height:750px}.c-works{padding:65px 5vw}.c-section-label{padding-bottom:30px}.c-projects{display:block}.c-project,.c-project:nth-child(n){width:100%;margin:0 0 55px}.c-project .c-photo,.c-project:first-child .c-photo{aspect-ratio:4/3}.c-project:first-child .c-photo{aspect-ratio:4/5}.c-project-meta{gap:12px}.c-project-heading{padding:35px 5vw}.c-project-heading .c-eyebrow{margin-top:45px}.c-gallery{padding:0 5vw;display:block}.c-gallery-item,.c-gallery-item:first-child.c-portrait{width:100%;margin:0 0 40px}.c-next{flex-wrap:wrap;gap:18px}.c-next>span:first-child{width:100%}.c-lightbox[open]{grid-template-columns:44px 1fr 44px}.c-lightbox button{width:36px;height:40px;margin:4px}.c-lightbox img{height:75dvh}.c-footer{padding:45px 5vw}.c-footer p{line-height:1.8;gap:20px}.c-view{display:none}}
 @media(prefers-reduced-motion:reduce){.construction-page *, .construction-page *:before,.construction-page *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.c-reveal.is-waiting{opacity:1;transform:none;clip-path:none}}
+
+/* MI Architects — a single cinematic opening, preserving the existing composition. */
+.c-hero-vision,.c-hero-material,.c-hero-built{display:inline-block}
+.c-intro-text .c-word{display:inline-block;white-space:nowrap}
+.c-intro-text .c-letter{display:inline-block}
+@media(prefers-reduced-motion:no-preference){
+ .c-intro-image>img{animation:c-hero-bloom 1.3s var(--c-ease) both}
+ .c-hero-vision{animation:c-vision-in .9s var(--c-ease) both}
+ .c-hero-material{animation:c-material-in .9s .08s var(--c-ease) both}
+ .c-hero-built{animation:c-built-in .9s .16s var(--c-ease) both}
+ .c-intro-text .c-letter{animation:c-letter-in .24s calc(1.02s + var(--letter-order)*.012s) ease-out both}
+ .c-intro-copy>.c-text-link{animation:c-explore-settle .4s 2.05s ease-out both}
+ .c-intro-copy>.c-text-link:hover,.c-intro-copy>.c-text-link:focus-visible{animation:none;opacity:1}
+}
+@keyframes c-hero-bloom{from{opacity:.2;transform:scale(1.075);filter:saturate(.9) brightness(1.15) blur(5px)}to{opacity:1;transform:scale(1);filter:saturate(.9) contrast(1.035) brightness(1.015)}}
+@keyframes c-vision-in{from{opacity:0;transform:translateX(-32px);filter:blur(5px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes c-material-in{from{opacity:0;transform:translateX(32px);filter:blur(5px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes c-built-in{from{opacity:0;transform:translateY(24px);filter:blur(5px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes c-letter-in{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+@keyframes c-explore-settle{from{opacity:1}to{opacity:.65}}
+
+.c-intro-copy>.c-text-link.c-explore-settled{animation:none;opacity:.65;transition:opacity .25s}
+.c-intro-copy>.c-text-link.c-explore-settled:hover,.c-intro-copy>.c-text-link.c-explore-settled:focus-visible{opacity:1}
+@media(prefers-reduced-motion:reduce){.c-intro-copy>.c-text-link.c-explore-settled{opacity:1}}

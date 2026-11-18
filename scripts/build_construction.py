@@ -33,7 +33,7 @@ for p in projects:
     if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', p['slug']) or not p['images']:
         raise ValueError('Use a lowercase URL slug and select at least one photograph')
     for image in p['images']:
-        original = (source / p['folder'] / image['file']).resolve()
+        original = (source / image.get('folder', p['folder']) / image['file']).resolve()
         if not original.is_relative_to(source.resolve()) or not original.is_file():
             raise ValueError(f'Missing or invalid source photograph: {original}')
         if not image['caption'].strip():
@@ -41,9 +41,9 @@ for p in projects:
 
 def prepare(job):
     project, photo = job
-    original = source/project['folder']/photo['file']
+    original = source/photo.get('folder', project['folder'])/photo['file']
     digest = hashlib.sha256(original.read_bytes()).hexdigest()[:12]
-    folder = ROOT/'multimedia/construction'/project['slug']; folder.mkdir(parents=True, exist_ok=True)
+    folder = ROOT/'multimedia/construction'/photo.get('asset_slug', project['slug']); folder.mkdir(parents=True, exist_ok=True)
     photo['assets'] = []
     for width in (640, 1600):
         dest = folder/f'{digest}-{width}.webp'
@@ -75,7 +75,7 @@ for n,p in enumerate(projects):
     cards.append(f'''<article class="c-project c-reveal"><a href="construction/{p['slug']}.html" class="c-project-link"><div class="c-photo">{photo(cover,sizes='(max-width: 700px) 92vw, 60vw')}<span class="c-view">Explore project ↗</span></div><div class="c-project-meta"><span class="c-index">{n+1:02}</span><div><h2>{esc(p['title'])}</h2><p>{esc(p['subtitle'])}</p></div><span aria-hidden="true">↗</span></div></a></article>''')
 # First project remains first; the numbered lead image retains its portrait composition.
 lead=projects[0]
-body=f'''<section class="c-intro"><div class="c-intro-copy"><p class="c-eyebrow">MI Development / Construction</p><h1>Vision.<br>Material.<br><em>Built.</em></h1><p class="c-intro-text">Architecture taking shape.<br>From the ground to the finest detail.</p><a class="c-text-link" href="#projects">Explore the works <span aria-hidden="true">↓</span></a></div><a class="c-intro-image c-photo" href="construction/{lead['slug']}.html">{photo(lead['images'][0],eager=True,sizes='(max-width: 700px) 100vw, 60vw')}<span class="c-hero-caption">01 / Terraced Horizon ↗</span></a></section><section id="projects" class="c-works"><div class="c-section-label"><h2>Selected works</h2><span>{len(projects):02} projects & studies</span></div><div class="c-projects">{''.join(cards)}</div></section>'''
+body=f'''<section class="c-intro"><div class="c-intro-copy"><p class="c-eyebrow">MI Development / Construction</p><h1><span class="c-hero-vision">Vision.</span><br><span class="c-hero-material">Material.</span><br><em class="c-hero-built">Built.</em></h1><p class="c-intro-text">Architecture taking shape.<br>From the ground to the finest detail.</p><a class="c-text-link" href="#projects">Explore the works <span aria-hidden="true">↓</span></a></div><a class="c-intro-image c-photo" href="construction/{lead['slug']}.html">{photo(lead['images'][0],eager=True,sizes='(max-width: 700px) 100vw, 60vw')}<span class="c-hero-caption">01 / {esc(lead['title'])} ↗</span></a></section><section id="projects" class="c-works"><div class="c-section-label"><h2>Selected works</h2><span>{len(projects):02} projects & studies</span></div><div class="c-projects">{''.join(cards)}</div></section>'''
 (ROOT/'construction.html').write_text(shell('Construction','Construction by MI Architects and MI Development. Explore site photography, material craftsmanship and architecture taking shape.',body))
 for n,p in enumerate(projects):
     figures=[]
@@ -84,4 +84,10 @@ for n,p in enumerate(projects):
     nxt=projects[(n+1)%len(projects)]
     body=f'''<section class="c-project-heading"><a class="c-text-link" href="../construction.html#projects">← All construction</a><p class="c-eyebrow">{esc(p['subtitle'])}</p><h1>{esc(p['title'])}</h1><p class="c-count">{len(p['images']):02} images / {'Design study' if p['slug']=='nidri-study' else 'Construction journal'}</p></section><div class="c-gallery">{''.join(figures)}</div><a class="c-next" href="{nxt['slug']}.html"><span>Next project</span><strong>{esc(nxt['title'])}</strong><span aria-hidden="true">↗</span></a><dialog class="c-lightbox" aria-label="Image gallery"><button class="c-lightbox-close" aria-label="Close gallery">✕</button><button class="c-lightbox-prev" aria-label="Previous image">←</button><figure><img alt=""><figcaption aria-live="polite"></figcaption></figure><button class="c-lightbox-next" aria-label="Next image">→</button></dialog>'''
     (ROOT/'construction'/f'{p["slug"]}.html').write_text(shell(p['title'],p['title']+' — '+p['subtitle']+'. A photographic journal by MI Architects.',body,'../'))
+for project in projects:
+    for alias in project.get('aliases', []):
+        if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', alias):
+            raise ValueError('Invalid project alias')
+        target = project['slug'] + '.html'
+        (ROOT/'construction'/f'{alias}.html').write_text(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url={target}"><link rel="canonical" href="https://www.miarchitects.gr/construction/{target}"><title>{esc(project["title"])} | MI Architects</title></head><body><a href="{target}">Explore {esc(project["title"])}</a></body></html>')
 print(f'Built {len(projects)} projects / {sum(len(p["images"]) for p in projects)} curated photographs. Originals unchanged.')

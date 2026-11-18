@@ -1,6 +1,26 @@
 /* MI Development — restrained reveals and accessible photographic galleries. */
 (() => {
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const introText = document.querySelector('.c-intro-text');
+  if (introText && !reduced.matches) {
+    introText.setAttribute('aria-label', introText.innerText.replace(/\s+/g, ' ').trim());
+    let order = 0;
+    [...introText.childNodes].forEach(node => {
+      if (node.nodeType !== Node.TEXT_NODE) return;
+      const fragment = document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach(word => {
+        if (/^\s+$/.test(word)) { fragment.append(document.createTextNode(word)); return; }
+        const wrapper = document.createElement('span');
+        wrapper.className = 'c-word'; wrapper.setAttribute('aria-hidden', 'true');
+        [...word].forEach(letter => {
+          const span = document.createElement('span'); span.className = 'c-letter';
+          span.style.setProperty('--letter-order', order++); span.textContent = letter; wrapper.append(span);
+        });
+        fragment.append(wrapper);
+      });
+      node.replaceWith(fragment);
+    });
+  }
   if (!reduced.matches && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
       if (entry.isIntersecting) { entry.target.classList.remove('is-waiting'); observer.unobserve(entry.target); }
@@ -12,6 +32,8 @@
       if (reduced.matches) { document.querySelectorAll('.is-waiting').forEach(el => el.classList.remove('is-waiting')); observer.disconnect(); }
     });
   }
+  document.querySelector('.c-intro-image>img')?.addEventListener('animationend', event => { event.currentTarget.style.animation = 'none'; }, {once:true});
+  document.querySelector('.c-intro-copy>.c-text-link')?.addEventListener('animationend', event => { event.currentTarget.classList.add('c-explore-settled'); }, {once:true});
   const dialog = document.querySelector('.c-lightbox');
   if (!dialog) return;
   const buttons = [...document.querySelectorAll('.c-gallery-open')];
